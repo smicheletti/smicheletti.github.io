@@ -1,0 +1,141 @@
+<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/mtl-and-fitnesstrainer-rectangle.png">
+	<div class="circle mtl-background">
+    	<h2>Improve</h2>
+    	<h5>WEB + ECOMMERCE</h5>
+	</div>
+</div>
+<div id="sideMenu">
+	<h5>IMPROVE</h5>
+	<hr>
+	<p><a href="#first"><i class="fa fa-caret-right"></i> Currently</a></p>
+	<p><a href="#second"><i class="fa fa-caret-right"></i> MTL</a></p>
+	<p><a href="#third"><i class="fa fa-caret-right"></i> FT</a></p>
+  <p><a href="#fourth"><i class="fa fa-caret-right"></i> Imagery</a></p>
+</div>
+<div class="container top-buffer">
+	<h2 class="text-center col-lg-10 col-lg-offset-1">How can we connect people to the best coaches and trainers possible?</h2>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="first">
+			<h3 class="center">My Current Role</h3>
+      <h5>Designer: May 2015 - Present</h5>
+      <h5>Design Intern: Spring Semester 2015</h5>
+			<p>Currently working as the sole designer for both MyTennisLessons and FitnessTrainer (MTL & FT), I have taken on the roles of UX/UI as well as front-end development and the occassional graphic design based projects. Throughout my time, I have successfully updated many pages on both websites in order to increase conversion rates as well as engagment while lowering the bounce rate.</p>
+		</section>
+	</div>
+	<div class="col-md-12 image-full">
+		<img src="/assets/final-photos/improve/final/mtl-1.png"/>
+	</div>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="second">
+			<h3 class="center">MyTennisLessons.com</h3>
+			<p>Specifically for MTL, I have recently launched successful SumoMe and MailChimp campaigns to capture customers would otherwise would have abandoned the site, successfully raising revenue about $7,000 in less than one month. SumoMe and MailChimp are common tools, but custom design imagery as well as precisely worded messages and incentives make all the difference.</p>
+		</section>
+	</div>
+	<div class="col-md-6 col-md-offset-3 image-full">
+    <img src="/assets/final-photos/improve/final/mtl-2.png"/>
+  </div>
+  <div class="col-md-6 image-full">
+    <img src="/assets/final-photos/improve/final/mtl-3.png"/>
+  </div>
+  <div class="col-md-6 image-full">
+    <img src="/assets/final-photos/improve/final/mtl-4.png"/>
+  </div>
+  <div class="col-md-8 col-md-offset-2 image-full">
+    <img src="/assets/final-photos/improve/final/mtl-5.png"/>
+  </div>
+  <div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+    <img src="/assets/final-photos/improve/final/mtl-6.png"/>
+  </div>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="third">
+			<h3 class="center">FitnessTrainer.com</h3>
+			<p>Coming in as an intern soon after the birth of FitnessTrainer, I was able to be much more involved in the design and functionality of the site as opposed to the already well established MTL site. I successfully raised the conversion rate of trainer signups by redesigning the sign up form, and we have continued to work on making the larger application more user-friendly. I was also instrumental in the redesign of the instructors' profile pages as well as the unqiue landing pages.</p>
+		</section>
+	</div>
+	<div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+    <img src="/assets/final-photos/improve/final/mtl-7.png"/>
+  </div>
+	<div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+    <img src="/assets/final-photos/improve/final/mtl-8.png"/>
+  </div>
+  <div class="col-lg-8 col-lg-offset-2 text-block">
+    <section id="fourth">
+      <h3 class="center">Iconography & Imagery</h3>
+      <p>One of the things I have enjoyed greatly has been the creation of unique icons and imagery for both websites. Illustrator remains by far my strong suit in terms of the Adobe suite, and I have had ample opportunities to explore vector creation throughout my time with MTL and FT.</p>
+    </section>
+  </div>
+  <div class="col-md-12 col-lg-4 col-lg-offset-2 image-full">
+    <img src="/assets/final-photos/improve/final/mtl-9.png"/>
+  </div>
+  <div class="col-md-12 col-lg-4 image-full">
+    <img src="/assets/final-photos/improve/final/mtl-10.png"/>
+  </div>
+  <div class="col-md-4 col-md-offset-4 image-full">
+    <img src="/assets/final-photos/improve/final/mtl-11.png" class="margin-btm"/>
+  </div>
+</div>
+<div class="container top-buffer bottom-navigation">
+	<a href="/seriegallery"><img src="/assets/arrow-left-orange.png" />Previous</a>
+	<a href="/spread">Next<img src="/assets/arrow-right-orange.png" /></a>
+</div>
+
+<script>
+   $(window).scroll(function(){
+       var leftToBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+       var distanceFromTop = $(window).scrollTop();
+       if( distanceFromTop > 300 && !$("#sideMenu").is(":visible") 
+          && leftToBottom > 300) {
+            $("#sideMenu").fadeIn();
+       }else if($("#sideMenu").is(":visible") && (distanceFromTop < 300 || leftToBottom < 300)){
+            $("#sideMenu").fadeOut();
+      }
+   });
+</script>
+
+<script>
+// Cache selectors
+var lastId,
+    sideMenu = $("#sideMenu"),
+    sideMenuHeight = sideMenu.outerHeight()+15,
+    // All list items
+    menuItems = sideMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-sideMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+sideMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+</script>

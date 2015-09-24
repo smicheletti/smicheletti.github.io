@@ -2,22 +2,17 @@
 <html>
   <head>
     <title>MyPortfolio</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-  	<link rel='stylesheet' href='/assets/base.css'>
-    <link rel='stylesheet' href='/assets/base-2.css'>
-    <link rel='stylesheet' href='/assets/variables.css'>
-    <link rel='stylesheet' href='/assets/home.css'>
-  	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  	<link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
-  	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  	<link rel='stylesheet' href='css/base.css'>
+    <link rel='stylesheet' href='css/base-2.css'>
+    <link rel='stylesheet' href='css/home.css'>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   	<script src="js/skrollr.js"></script>
     <script src="js/_main.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -170,15 +165,15 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="/designmatters">Design Matters</a></li>
-              <li><a href="/spread">Spread</a></li>
-              <li><a href="/electrocuties">Electrocuties</a></li>
-              <li><a href="/hi">Hi</a></li>
-              <li><a href="/512stew">512Stew</a></li>
-              <li><a href="/improve">Improve</a></li>
-              <li><a href="/seriewebsite">Serie Website</a></li>
-              <li><a href="/ftapp">FitnessTrainer App</a></li>
-              <li><a href="/seriegallery">Serie Gallery & Community Center</a></li>
+              <li><a href="designmatters.html">Design Matters</a></li>
+              <li><a href="spread.html">Spread</a></li>
+              <li><a href="electrocuties.html">Electrocuties</a></li>
+              <li><a href="hi.html">Hi</a></li>
+              <li><a href="512stew.html">512Stew</a></li>
+              <li><a href="improve.html">Improve</a></li>
+              <li><a href="seriewebsite.html">Serie Website</a></li>
+              <li><a href="ftapp.html">FitnessTrainer App</a></li>
+              <li><a href="seriegallery.html">Serie Gallery & Community Center</a></li>
             </ul>
           </div>
           <li><a href="/about">ABOUT</a></li>
@@ -195,14 +190,14 @@
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a href="/designmatters">Design Matters</a></li>
-          <li><a href="/spread">Spread</a></li>
-          <li><a href="/electrocuties">Electrocuties</a></li>
-          <li><a href="/512stew">512Stew</a></li>
-          <li><a href="/improve">Improve</a></li>
-          <li><a href="/seriewebsite">Serie Website</a></li>
-          <li><a href="/ftapp">FitnessTrainer App</a></li>
-          <li><a href="/seriegallery">Serie Gallery & Community Center</a></li>
+          <li><a href="designmatters.html">Design Matters</a></li>
+          <li><a href="spread.html">Spread</a></li>
+          <li><a href="electrocuties.html">Electrocuties</a></li>
+          <li><a href="512stew.html">512Stew</a></li>
+          <li><a href="improve.html">Improve</a></li>
+          <li><a href="seriewebsite.html">Serie Website</a></li>
+          <li><a href="ftapp.html">FitnessTrainer App</a></li>
+          <li><a href="seriegallery.html">Serie Gallery & Community Center</a></li>
         </ul>
       </div>
       <a href="/about">ABOUT</a>
@@ -213,11 +208,130 @@
         <img src="" />
         <h3>Sarah Micheletti</h3>
       </a>
-      <p>Designer — Ocassional Developer</p>
+      <p>Designer - Ocassional Developer</p>
     </div>
   </div>
 
-  <%= yield %>
+  <div class="hero hero-home">
+    <h1>Some text here about desgin that's probably this long</h1>
+    <div class="wrapper">
+      <a href="about.html">
+        <img src="/assets/arrow-right.png">
+        <p>About Me</p>
+      </a>
+    </div>
+  </div>
+  <div class="container col-home">
+    <div class="row">
+      <h3>PROJECTS & WORK</h3>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 dm wrapper">
+        <a href="designmatters.html">
+          <img src="https://drive.google.com/file/d/0B0bq-JAgdr5gS3RlYWRxTnZkdG8/view?usp=sharing" />
+          <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+        </a>
+        <hr class="de-color">
+        <a href="designmatters.html">
+          <h2>Design Matters</h2>
+        </a>
+        <p>EXHIBITION + PRINT</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 sp wrapper">
+        <a href="spread.html">
+          <img src="/assets/spread-square.png" />
+          <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+        </a>
+        <hr class="sp-color">
+        <a href="spread.html">
+          <h2>Spread</h2>
+        </a>
+        <p>PRODUCT</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 el wrapper">
+        <a href="electrocuties.html">
+          <img src="/assets/electrocuties-square.png" />
+          <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+        </a>
+        <hr class="el-color">
+        <a href="electrocuties.html">
+          <h2>Electrocuties</h2>
+        </a>
+        <p>MOBILE + GAMING</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 hi wrapper">
+        <a href="hi.html">
+          <img src="/assets/hi-square.png" />
+          <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+        </a>
+        <hr class="hi-color">
+        <a href="hi.html">
+          <h2>Hi</h2>
+        </a>
+        <p>PRINT + SYMBOL</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 st wrapper">
+        <a href="512stew.html">
+          <img src="/assets/512stew-square.png" />
+          <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+        </a>
+        <hr class="st-color">
+        <a href="512stew.html">
+          <h2>512Stew</h2>
+        </a>
+        <p>PRINT + PROJECT MANAGEMENT</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 mtl wrapper">
+        <a href="improve.html">
+          <img src="/assets/mtl-fitnesstrainer-square.png" />
+          <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+        </a>
+        <hr class="mtl-color">
+        <a href="improve.html">
+          <h2>Improve</h2>
+        </a>
+        <p>WEB + ECOMMERCE</p>
+      </div>
+    </div>
+    <div class="row">
+      <h3>WORK IN PROGRESS</h3>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 sw wrapper">
+        <a href="seriewebsite.html">
+          <img src="/assets/serie-website-square.png" />
+          <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+        </a>
+        <hr class="sw-color">
+        <a href="seriewebsite.html">
+          <h2>Serie Website</h2>
+        </a>
+        <p>WEB + ECOMMERCE</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 ft wrapper">
+        <a href="ftapp.html">
+          <img src="/assets/fitnesstrainer-app-blue-square.png" />
+          <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+        </a>
+        <hr class="ft-color">
+        <a href="ftapp.html">
+          <h2>FitnessTrainer App</h2>
+        </a>
+        <p>MOBILE + APP</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 sg wrapper">
+        <a href="seriegallery.html">
+          <img src="/assets/serie-project-square.png" />
+          <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+        </a>
+        <hr class="sg-color">
+        <a href="seriegallery.html">
+          <h2>Serie Gallery & Community Center</h2>
+        </a>
+        <p>ENVIRONMENT</p>
+      </div>
+    </div>
+  </div>
 
   <div class="footer">
     <div class="container">
@@ -234,7 +348,7 @@
       </div>
       <div class="row">
         <h3 style="color:#FF5700">Made with <i class="fa fa-heart"></i> in Austin, TX</h3>
-        <p>© Sarah Micheletti, 2015.</p>
+        <p>Copyright Sarah Micheletti, 2015.</p>
         <p class="small" style="padding-top:5px">Unauthorized use and/or duplication of this material without express and written permission from this author and/or owner is strictly prohibited.</p>
       </div>
     </div>

@@ -1,0 +1,133 @@
+<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/spread_4.png">
+  <div class="circle sp-background">
+      <h2>Spread</h2>
+      <h5>PRODUCT</h5>
+  </div>
+</div>
+<div id="sideMenu">
+  <h5>SPREAD</h5>
+  <hr>
+  <p><a href="#first"><i class="fa fa-caret-right"></i> Overview</a></p>
+  <p><a href="#second"><i class="fa fa-caret-right"></i> Form & Function</a></p>
+  <p><a href="#third"><i class="fa fa-caret-right"></i> Prototype</a></p>
+</div>
+<div class="container top-buffer">
+  <h2 class="text-center col-lg-10 col-lg-offset-1">How can I create a kitchen item using personal insights?</h2>
+  <div class="col-lg-8 col-lg-offset-2 text-block">
+    <section id="first">
+      <h3 class="center">Revitalization of an Object</h3>
+      <p>It is a family and personal tradition of mine to eat toast with butter and marmalade: often for breakfast, sometimes for lunch, but usually it’s an after dinner dessert. Trying to spread cold real butter straight out of the fridge is a frustration, but easy-spread margarine is arguably bad for you. While butter crocks they may be archaic, they get the job done making your butter smooth and soft 24/7. Spread revitalizes this object that has, in its absence, given way to convenient, but less natural food choices. Revolt! Say "NO" to margarine! Let's make life easier and (somewhat) healthier.</p>
+    </section>
+  </div>
+  <div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+    <img src="/assets/final-photos/spread/final/spread-1.png"/>
+  </div>
+  <div class="col-md-12 col-lg-8 col-lg-offset-2 image-full">
+    <img src="/assets/final-photos/spread/final/spread-2.png"/>
+  </div>
+  <div class="col-md-12 image-full">
+    <img src="/assets/final-photos/spread/final/spread-3.png"/>
+  </div>
+  <div class="col-lg-8 col-lg-offset-2 text-block">
+    <section id="second">
+      <h3 class="center">Form & Functionality</h3>
+      <p>The final form utilizes both wood and ceramic pieces to keep butter fresh and soft without the need of refrigeration. Filling ther ceramic bottom with water creates an air-tight seal for the exposed butter contained in the top piece, ensuring preservation.</p>
+    </section>
+  </div>
+  <div class="col-md-4 image-full">
+    <img src="/assets/final-photos/spread/final/spread-4.png"/>
+  </div>
+  <div class="col-md-4 image-full">
+    <img src="/assets/final-photos/spread/final/spread-5.png"/>
+  </div>
+  <div class="col-md-4 image-full">
+    <img src="/assets/final-photos/spread/final/spread-6.png"/>
+  </div>
+  <div class="col-lg-8 col-lg-offset-2 text-block">
+    <section id="third">
+      <h3 class="center">Final Prototype</h3>
+      <p>Through the exploration of past memories of weekly Friday night dinners at my grandmother’s house, as well as extensive research into the history of everything associated with toast, I developed a revamped butter crock. The end product became a prototype made from wood as well as 3D printing meant to simulate ceramic pieces. Each iteration of the plate, butter crock, and accompanying knife took into consideration previous objects from the past, ergonomics, and issues that come about due to the use of each object.</p>
+    </section>
+  </div>
+  <div class="col-md-6 image-full">
+    <img src="/assets/final-photos/spread/final/spread-7.png"/>
+  </div>
+  <div class="col-md-6 image-full">
+    <img src="/assets/final-photos/spread/final/spread-8.png"/>
+  </div>
+  <div class="col-lg-4 image-full">
+    <video controls="controls" width="800" height="600" name="Video Name" src="/assets/final-photos/spread/final/spread-9.mov"></video>
+  </div>
+  <div class="col-lg-8 image-full">
+    <video controls="controls" width="800" height="600" name="Video Name" src="/assets/final-photos/spread/final/spread-10.mov"></video>
+  </div>
+  <div class="col-md-8 col-md-offset-2 image-full">
+    <img src="/assets/final-photos/spread/final/spread-11.png" class="margin-btm"/>
+  </div>
+</div>
+<div class="container top-buffer bottom-navigation">
+  <a href="/spread"><img src="/assets/arrow-left-orange.png" />Previous</a>
+  <a href="/electrocuties">Next<img src="/assets/arrow-right-orange.png" /></a>
+</div>
+
+<script>
+   $(window).scroll(function(){
+       var leftToBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+       var distanceFromTop = $(window).scrollTop();
+       if( distanceFromTop > 300 && !$("#sideMenu").is(":visible") 
+          && leftToBottom > 300) {
+            $("#sideMenu").fadeIn();
+       }else if($("#sideMenu").is(":visible") && (distanceFromTop < 300 || leftToBottom < 300)){
+            $("#sideMenu").fadeOut();
+      }
+   });
+</script>
+
+<script>
+// Cache selectors
+var lastId,
+    sideMenu = $("#sideMenu"),
+    sideMenuHeight = sideMenu.outerHeight()+15,
+    // All list items
+    menuItems = sideMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-sideMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+sideMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+</script>
+

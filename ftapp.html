@@ -1,0 +1,105 @@
+<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/final-photos/fitnesstrainer-app/final/ft-blue.png">
+	<div class="circle ft-background">
+    	<h2>FitnessTrainer <br> App</h2>
+    	<h5>MOBILE</h5>
+	</div>
+</div>
+<div id="sideMenu">
+	<h5>FT APP</h5>
+	<hr>
+	<p><a href="#first"><i class="fa fa-caret-right"></i> Mobile App</a></p>
+	<p><a href="#second"><i class="fa fa-caret-right"></i> Current FT</a></p>
+</div>
+<div class="container top-buffer">
+	<h2 class="text-center col-lg-10 col-lg-offset-1">How can we better help our trainers?</h2>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="first">
+			<h3 class="center">A Mobile App Solution</h3>
+      <h5>The first round mockups can be found at <a href="https://invis.io/B548U1VME">Invision Mockups</a></h5>
+			<p>Sincer our current <a href="https://fitnesstrainer.com">FitnessTrainer</a> is functional, our team wanted to explore the possibilities that a mobile app could offer, particularly for the trainers that find and manage clients through our service. These screens and mockups are purely my own work and ideas that I have played around with in my spare time; however, I believe that they offer a solution for trainers to be able to better manage their time and clients. Ideally this project needs an extensive design research portion using Human Centered Design methods to better understand the needs of our trainers and how we can create a better experience for them.</p>
+		</section>
+	</div>
+	<div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+		<iframe width="438" height="930" src="//invis.io/2W48U1UKT" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="second">
+			<h3 class="center">FitnessTrainer Currently</h3>
+			<p>The website currently allows both users and trainers to have accounts, with trainers having an extensive back-end once logged in. Through their back-end, they can schedule training sessions, view client's info, and check each client's payment credits. However, what we currently have live is not yet mobile-friendly (though that is thankfully in the works). Creating a mobile app more suited specifically to trainers' needs would help allieviate some of the difficulties when having to use the website on their mobile browsers. (High fidelity mockups shown below)</p>
+		</section>
+	</div>
+	<div class="col-md-12 image-full">
+		<img src="/assets/final-photos/fitnesstrainer-app/final/ft-1.png"/>
+	</div>
+	<div class="col-md-12 image-full">
+    <img src="/assets/final-photos/fitnesstrainer-app/final/ft-2.png"/>
+  </div>
+	<div class="col-md-6 col-md-offset-3 image-full image-full">
+    <img src="/assets/final-photos/fitnesstrainer-app/final/ft-3.png" class="margin-btm"/>
+  </div>
+</div>
+<div class="container top-buffer bottom-navigation">
+	<a href="/seriewebsite"><img src="/assets/arrow-left-orange.png" />Previous</a>
+	<a href="/seriegallery">Next<img src="/assets/arrow-right-orange.png" /></a>
+</div>
+
+<script>
+   $(window).scroll(function(){
+       var leftToBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+       var distanceFromTop = $(window).scrollTop();
+       if( distanceFromTop > 300 && !$("#sideMenu").is(":visible") 
+          && leftToBottom > 300) {
+            $("#sideMenu").fadeIn();
+       }else if($("#sideMenu").is(":visible") && (distanceFromTop < 300 || leftToBottom < 300)){
+            $("#sideMenu").fadeOut();
+      }
+   });
+</script>
+
+<script>
+// Cache selectors
+var lastId,
+    sideMenu = $("#sideMenu"),
+    sideMenuHeight = sideMenu.outerHeight()+15,
+    // All list items
+    menuItems = sideMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-sideMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+sideMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+</script>
