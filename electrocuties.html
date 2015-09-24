@@ -1,0 +1,151 @@
+<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/electrocuties.png">
+	<div class="circle el-background">
+    	<h2>Electrocuties</h2>
+    	<h5>MOBILE + GAMING</h5>
+	</div>
+</div>
+<div id="sideMenu">
+	<h5>ELECTROCUTIES</h5>
+	<hr>
+	<p><a href="#first"><i class="fa fa-caret-right"></i> UT Students</a></p>
+	<p><a href="#second"><i class="fa fa-caret-right"></i> Gameplay</a></p>
+	<p><a href="#third"><i class="fa fa-caret-right"></i> Physical Space</a></p>
+  <p><a href="#fourth"><i class="fa fa-caret-right"></i> Proposal</a></p>
+</div>
+<div class="container top-buffer">
+	<h2 class="text-center col-lg-10 col-lg-offset-1">How can we make saving energy on campus fun?</h2>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="first">
+			<h3 class="center">Energy Saving on Campus</h3>
+			<p>Adopting energy saving behaviors into one's life can be a difficult task—you know you should but it's hard to break habits. UT already has taken great steps to amp up energy efficiency, but a lackluster student population is difficult to excite when it comes to being green—until Electrocuties. Playing off of Millenials' love childhood games such as Pokemon and Digimon, the gameplay allows for players to have fun while creating beneficial habits.</p>
+		</section>
+	</div>
+	<div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+		<img src="/assets/final-photos/electrocuties/final/electrocuties-1.png"/>
+	</div>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="second">
+			<h3 class="center">Mobile Gameplay</h3>
+			<p>Electrocuties as a mobile game incentivizes positive energy-saving behavior on UT’s campus by students. Through interactions with a customizable cutie that users create, simple tasks are incentivized through a rewards system encouraging users to integrate these minimal changes into their daily lives and habits. After downloading the game, the user is prompted to customize and personalize a cutie that they use to play throughout the game. Leaderboards and social interactions encourage users to participate in behaviors in order to gain high scores and compete with friends.</p>
+		</section>
+	</div>
+	<div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-2.png"/>
+  </div>
+  <div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-3.png"/>
+  </div>
+  <div class="col-md-4 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-4.gif"/>
+  </div>
+  <div class="col-md-4 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-5.gif"/>
+  </div>
+  <div class="col-md-4 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-6.gif"/>
+  </div>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="third">
+			<h3 class="center">Spaces on Campus</h3>
+			<p>Sensors installed on campus connect to the user's phone through blue-tooth in order to record whenever students participate in energy saving behaviors. These behaviors serve to unlock mini games through which players can gain items and accessories for their cuties. Each behavior is a minor change from students' daily routines that creates impact on campus physically as well as inside the game.</p>
+		</section>
+	</div>
+  <div class="col-md-4 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-7.png"/>
+  </div>
+  <div class="col-md-4 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-8.png"/>
+  </div>
+  <div class="col-md-4 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-9.png"/>
+  </div>
+  <div class="col-md-8 col-md-offset-2 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-10.png"/>
+  </div>
+  <div class="col-md-8 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-11.png"/>
+  </div>
+  <div class="col-md-4 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-12.png"/>
+  </div>
+  <div class="col-md-12 image-full">
+    <img src="/assets/final-photos/electrocuties/final/electrocuties-13.png"/>
+  </div>
+  <div class="col-lg-8 col-lg-offset-2 text-block">
+    <section id="fourth">
+      <h3 class="center">Final Proposal</h3>
+      <p>Sensors installed on campus connect to the user's phone through blue-tooth in order to record whenever students participate in energy saving behaviors. These behaviors serve to unlock mini games through which players can gain items and accessories for their cuties. Each behavior is a minor change from students' daily routines that creates impact on campus physically as well as inside the game.</p>
+    </section>
+  </div>
+  <div class="col-md-6 col-md-offset-3 image-full">
+    <a href="/assets/electrocuties_spread.pdf" target=_blank class="pdf">
+      <img src="/assets/final-photos/electrocuties/final/electrocuties-14.png" class="margin-btm"/>
+      <h5>View Proposal PDF</h5>
+    </a>
+  </div>
+</div>
+<div class="container top-buffer bottom-navigation">
+	<a href="/spread"><img src="/assets/arrow-left-orange.png" />Previous</a>
+	<a href="/512stew">Next<img src="/assets/arrow-right-orange.png" /></a>
+</div>
+
+<script>
+   $(window).scroll(function(){
+       var leftToBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+       var distanceFromTop = $(window).scrollTop();
+       if( distanceFromTop > 300 && !$("#sideMenu").is(":visible") 
+          && leftToBottom > 300) {
+            $("#sideMenu").fadeIn();
+       }else if($("#sideMenu").is(":visible") && (distanceFromTop < 300 || leftToBottom < 300)){
+            $("#sideMenu").fadeOut();
+      }
+   });
+</script>
+
+<script>
+// Cache selectors
+var lastId,
+    sideMenu = $("#sideMenu"),
+    sideMenuHeight = sideMenu.outerHeight()+15,
+    // All list items
+    menuItems = sideMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-sideMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+sideMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+</script>

@@ -1,0 +1,120 @@
+<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/design_matters_4.png">
+	<div class="circle de-background">
+    	<h2>Design <br> Matters</h2>
+    	<h5>EXHIBITION + PRINT</h5>
+	</div>
+</div>
+<div id="sideMenu">
+	<h5>DESIGN MATTERS</h5>
+	<hr>
+	<p><a href="#first"><i class="fa fa-caret-right"></i> Exhibition</a></p>
+	<p><a href="#second"><i class="fa fa-caret-right"></i> Catalogue</a></p>
+	<p><a href="#third"><i class="fa fa-caret-right"></i> Objects</a></p>
+</div>
+<div class="container top-buffer">
+	<h2 class="text-center col-lg-10 col-lg-offset-1">How can you convey how important design is?</h2>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="first">
+			<h3 class="center">Education Through Exhibition</h3>
+			<p>Through this curation of small, seemingly insignificant kitchen objects, visitors of the exhibition are meant to come to a better understanding as to why the design of objects matters and how they can evaluate objects in their lives.</p>
+		</section>
+	</div>
+	<div class="col-md-12 image-full">
+		<img src="/assets/final-photos/design-matters/final/dm-1.png"/>
+	</div>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="second">
+			<h3 class="center">Show Catalogue</h3>
+			<p>This catalogue documents the exhibition and doubles by giving visitors of the exhibit a take-away and better understanding of the curation and giving viewers unable to attend a detailed description and analysis of the curation of objects. Graphic elements, physical evaluation sheets, and a digital leader-board in the space prompt visitors to start considering what it means for something to be designed well.</p>
+		</section>
+	</div>
+  <div class="col-sm-6 col-sm-offset-3 image-full">
+    <a href="/assets/electrocuties_spread.pdf" target=_blank style="color:blue" class="pdf">
+      <img src="/assets/final-photos/design-matters/final/dm-2.png" class="margin-btm"/>
+      <h5>View Catalogue PDF</h5>
+    </a>
+  </div>
+	<div class="col-sm-12 col-md-12 image-full">
+		<img src="/assets/final-photos/design-matters/final/dm-3.png"/>
+	</div>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="third">
+			<h3 class="center">Object Evaluation</h3>
+			<p>Upon entering the exhibition, visitors would each be given a copy of the catalogue containing examples of design criteria, questionaires, and space for notes. This content is not meant to be the end-all and does not mean to be the only way of critque, but means to be a way to prompt thought and introduce new concepts.</p>
+		</section>
+	</div>
+	<div class="col-sm-12 image-full">
+		<img src="/assets/final-photos/design-matters/final/dm-4.png" class="margin-btm"/>
+	</div>
+	<div class="col-lg-8 col-lg-offset-2 image-full">
+		<img src="/assets/de-image-3.png"/>
+	</div>
+		<div class="col-md-12 image-full last-image">
+		<img src="/assets/de-image-5.png" class="margin-btm"/>
+	</div>
+</div>
+<div class="container top-buffer bottom-navigation">
+	<a href="/seriegallery"><img src="/assets/arrow-left-orange.png" />Previous</a>
+	<a href="/spread">Next<img src="/assets/arrow-right-orange.png" /></a>
+</div>
+
+<script>
+   $(window).scroll(function(){
+       var leftToBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+       var distanceFromTop = $(window).scrollTop();
+       if( distanceFromTop > 300 && !$("#sideMenu").is(":visible") 
+          && leftToBottom > 300) {
+            $("#sideMenu").fadeIn();
+       }else if($("#sideMenu").is(":visible") && (distanceFromTop < 300 || leftToBottom < 300)){
+            $("#sideMenu").fadeOut();
+      }
+   });
+</script>
+
+<script>
+// Cache selectors
+var lastId,
+    sideMenu = $("#sideMenu"),
+    sideMenuHeight = sideMenu.outerHeight()+15,
+    // All list items
+    menuItems = sideMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-sideMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+sideMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+</script>

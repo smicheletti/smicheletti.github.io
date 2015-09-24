@@ -1,0 +1,112 @@
+<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/serie.png">
+	<div class="circle sw-background">
+    	<h2>Serie <br> Website</h2>
+    	<h5>WEB + ECOMMERCE</h5>
+	</div>
+</div>
+<div id="sideMenu">
+	<h5>SERIE</h5>
+	<hr>
+	<p><a href="#first"><i class="fa fa-caret-right"></i> Serie</a></p>
+	<p><a href="#second"><i class="fa fa-caret-right"></i> Revitalization</a></p>
+	<p><a href="#third"><i class="fa fa-caret-right"></i> Website Redo</a></p>
+</div>
+<div class="container top-buffer">
+	<h2 class="text-center col-lg-10 col-lg-offset-1">How can we keep The Serie Project alive?</h2>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="first">
+			<h3 class="center">The Serie Project</h3>
+      <h5>The new website will be live at: <a href="https://serieproject.com">serieproject.com</a> after October 1st, 2015.</h5>
+			<p>Sam Coronado’s intention for the Serie Project was to create a solid platform that allowed for both established and emerging Latino artists to reach a bigger audience, and in turn, empower their words and creativity to spread. Since his passing in 2013, the Serie Project has continued to keep alive his vision through advocating awareness of cultural diversity in the Austin art community through advancing the fine art of serigraphy.</p>
+		</section>
+	</div>
+	<div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+		<img src="/assets/final-photos/seriewebsite/final/serie-1.png"/>
+	</div>
+  <div class="col-md-6 col-md-offset-3 image-full">
+    <img src="/assets/final-photos/seriewebsite/final/serie-2.png"/>
+  </div>
+	<div class="col-lg-8 col-lg-offset-2 text-block">
+		<section id="second">
+			<h3 class="center">Revitalizing the Project</h3>
+			<p>In order to continue being a presence, the Serie Project has begun to undergo a revitalization. With a multitude of prints on hand, Sam's wife Jill Ramirez hopes to sell them to institutions and collectors across the country in order to fund the redo of the studio space (<a href="/serie-gallery">for updates view Serie Gallery Space WIP</a>). In order to do this, I am in the process of migrating their website from their outdated WordPress to a new SquareSpace site.</p>
+		</section>
+	</div>
+	<div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+    <img src="/assets/final-photos/seriewebsite/final/serie-3.png"/>
+  </div>
+  <div class="col-md-12 col-lg-10 col-lg-offset-1 image-full">
+    <img src="/assets/final-photos/seriewebsite/final/serie-4.png"/>
+  </div>
+	<div class="col-lg-8 col-lg-offset-2 text-block margin-btm">
+		<section id="third">
+			<h3 class="center">New Website - Work In Progress</h3>
+			<p>The Serie Project's WordPress website was in store for some much needed design changes to make it more user friendly, mobile optimization, as well as to better suit it for its new main purpose: selling and distributing the serigraph prints. Since I won't always be around to make changes or manage orders, I chose SquareSpace because of its great user interface which will make it much easier for Jill and her co-worker Linda to manage in the future.</p>
+		</section>
+	</div>
+</div>
+<div class="container top-buffer bottom-navigation">
+	<a href="/improve"><img src="/assets/arrow-left-orange.png" />Previous</a>
+	<a href="/ft-app">Next<img src="/assets/arrow-right-orange.png" /></a>
+</div>
+
+<script>
+   $(window).scroll(function(){
+       var leftToBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+       var distanceFromTop = $(window).scrollTop();
+       if( distanceFromTop > 300 && !$("#sideMenu").is(":visible") 
+          && leftToBottom > 300) {
+            $("#sideMenu").fadeIn();
+       }else if($("#sideMenu").is(":visible") && (distanceFromTop < 300 || leftToBottom < 300)){
+            $("#sideMenu").fadeOut();
+      }
+   });
+</script>
+
+<script>
+// Cache selectors
+var lastId,
+    sideMenu = $("#sideMenu"),
+    sideMenuHeight = sideMenu.outerHeight()+15,
+    // All list items
+    menuItems = sideMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-sideMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+sideMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+</script>

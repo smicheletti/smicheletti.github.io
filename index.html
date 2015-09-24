@@ -1,6 +1,314 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>MyPortfolio</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  	<link rel='stylesheet' href='/assets/base.css'>
+    <link rel='stylesheet' href='/assets/base-2.css'>
+    <link rel='stylesheet' href='/assets/variables.css'>
+    <link rel='stylesheet' href='/assets/home.css'>
+  	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  	<link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
+  	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+  	<script src="js/skrollr.js"></script>
+    <script src="js/_main.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
+    <script>
+      $(function(){
+
+          $("#typed").typed({
+              strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+              typeSpeed: 30,
+              backDelay: 500,
+              loop: false,
+              contentType: 'html', // or text
+              // defaults to false for infinite loop
+              loopCount: false,
+              callback: function(){ foo(); },
+              resetCallback: function() { newTyped(); }
+          });
+
+          $(".reset").click(function(){
+              $("#typed").typed('reset');
+          });
+
+      });
+
+      function newTyped(){ /* A new typed object */ }
+
+      function foo(){ console.log("Callback"); }
+
+    </script>
+<style>
+  p {
+      margin: 0;
+  }
+  #header {
+      height: 60px;
+      background: pink;
+      float: left;
+      width: 100%;
+  }
+  .jumbo {
+      background-image: url('/assets/tableblur.png');
+      background-attachment: fixed;
+      position:relative;
+  }
+  .fullheight {
+      height: 100%;
+  }
+  .midheight {
+      height: 400px;
+  }
+  #select {
+      height: 60px;
+      background-color:yellow;
+      width:100%;
+  }
+
+
+
+  /* CSS */
+  .hsContainer {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      opacity: 0;
+  }
+  .hsContent {
+      max-width: 450px;
+      margin: -150px auto 0 auto;
+      display: table-cell;
+      vertical-align: middle;
+      color: #ebebeb;
+      padding: 0 8%;
+      text-align: center
+  }
+  .bcg {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+  }
+  /* Slide 1 */
+  #slide-1 .bcg {background-image:url('/assets/tableblur.png')}
+  /* CSS - Slide 2 */
+  #slide-2 .bcg {
+      background: none;
+      background-color: #010101;
+      height: 310px;
+      text-align: center
+  }
+  /* CSS */
+  .hsContainer {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      opacity: 0;
+  }
+  .hsContent {
+      max-width: 450px;
+      margin: -150px auto 0 auto;
+      display: table-cell;
+      vertical-align: middle;
+      color: #ebebeb;
+      padding: 0 8%;
+      text-align: center
+  }
+  .bcg {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+  }
+  .blackOverlay{
+      background-color:#000;
+      opacity:0.0;
+      position:absolute;
+      top:0;
+      width:100%;
+      height:600px;
+  }
+	</style>
+</head>
 <body>
-<h1>Hi World</h1>
+  <div id="main-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid" style="background-color:#FF5700;">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Sarah Micheletti</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              WORK
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="/designmatters">Design Matters</a></li>
+              <li><a href="/spread">Spread</a></li>
+              <li><a href="/electrocuties">Electrocuties</a></li>
+              <li><a href="/hi">Hi</a></li>
+              <li><a href="/512stew">512Stew</a></li>
+              <li><a href="/improve">Improve</a></li>
+              <li><a href="/seriewebsite">Serie Website</a></li>
+              <li><a href="/ftapp">FitnessTrainer App</a></li>
+              <li><a href="/seriegallery">Serie Gallery & Community Center</a></li>
+            </ul>
+          </div>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="secondary-nav" class="container-fluid" role="navigation">
+    <div class="container links">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          WORK
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a href="/designmatters">Design Matters</a></li>
+          <li><a href="/spread">Spread</a></li>
+          <li><a href="/electrocuties">Electrocuties</a></li>
+          <li><a href="/512stew">512Stew</a></li>
+          <li><a href="/improve">Improve</a></li>
+          <li><a href="/seriewebsite">Serie Website</a></li>
+          <li><a href="/ftapp">FitnessTrainer App</a></li>
+          <li><a href="/seriegallery">Serie Gallery & Community Center</a></li>
+        </ul>
+      </div>
+      <a href="/about">ABOUT</a>
+      <a href="/contact">CONTACT</a>
+    </div>
+    <div class="container name">
+      <a class="navbar-brand" href="/">
+        <img src="" />
+        <h3>Sarah Micheletti</h3>
+      </a>
+      <p>Designer — Ocassional Developer</p>
+    </div>
+  </div>
+
+  <%= yield %>
+
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <a href="https://www.linkedin.com/in/sarahmicheletti">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="https://instagram.com/sarahmicheletti/">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="https://www.behance.net/sarahmicheletti">
+          <i class="fa fa-behance"></i>
+        </a>
+      </div>
+      <div class="row">
+        <h3 style="color:#FF5700">Made with <i class="fa fa-heart"></i> in Austin, TX</h3>
+        <p>© Sarah Micheletti, 2015.</p>
+        <p class="small" style="padding-top:5px">Unauthorized use and/or duplication of this material without express and written permission from this author and/or owner is strictly prohibited.</p>
+      </div>
+    </div>
+  </div>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/assets/javascript/parallax.js"></script>
+
+<script>
+  $(document).scroll(function () {
+      var y = $(this).scrollTop();
+      if (y > 300) {
+          $('#main-nav').fadeIn();
+      } else {
+          $('#main-nav').fadeOut();
+      }
+  });
+</script>
+
+<script>
+$(function () {
+    $(window).scroll(function () {
+        var currentScrollTop = $(window).scrollTop();
+        $('.blackOverlay').css('opacity',currentScrollTop/$('.blackOverlay').height());
+
+    });
+});
+</script>
+
+<script>
+jQuery(document).ready(function($){
+    //if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
+    var MQL = 1170;
+
+    //open/close primary navigation
+    $('.cd-primary-nav-trigger').on('click', function(){
+        $('.cd-menu-icon').toggleClass('is-clicked'); 
+        $('.cd-header').toggleClass('menu-is-open');
+        
+        //in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
+        if( $('.cd-primary-nav').hasClass('is-visible') ) {
+            $('.cd-primary-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+                $('body').removeClass('overflow-hidden');
+            });
+        } else {
+            $('.cd-primary-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
+                $('body').addClass('overflow-hidden');
+            }); 
+        }
+    });
+});
+</script>
+
+<script>
+$('#myAffix').affix({
+  offset: {
+    top: 100,
+    bottom: function () {
+      return (this.bottom = $('.footer').outerHeight(true))
+    }
+  }
+})
+</script>
+<!--FADE OUT SCROLL-->
+<script>
+$(window).on('scroll', function() {
+    $('.parallax-mirror').css('opacity', function() {
+        return 1 - ($(window).scrollTop() / $(this).outerHeight());
+    });
+});
+</script>
 </body>
 </html>
+
+

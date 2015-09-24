@@ -1,0 +1,122 @@
+<div class="parallax-window" data-parallax="scroll" data-image-src="/assets/hi-white.png">
+  <div class="circle hi-background">
+      <h2>Hi</h2>
+      <h5>PRINT + PROPOSAL</h5>
+  </div>
+</div>
+<div id="sideMenu">
+  <h5>HI</h5>
+  <hr>
+  <ul>
+    <li><a href="#first"><i class="fa fa-caret-right"></i> Overview</a></li>
+    <li><a href="#second"><i class="fa fa-caret-right"></i> Form & Function</a></li>
+    <li><a href="#third"><i class="fa fa-caret-right"></i> Objects</a></li>
+  </ul>
+</div>
+<div class="container top-buffer">
+  <h2 class="text-center col-lg-10 col-lg-offset-1">How can you let someone know you're open to friendship?</h2>
+  <div class="col-lg-8 col-lg-offset-2 text-block">
+    <section id="first">
+      <h3 class="center">My Current Role</h3>
+      <p>Currently working as the sole designer for both MyTennisLessons and FitnessTrainer (MTL & FT), I have taken on the roles of UX/UI as well as front-end development and the occassional graphic design based projects. Throughout my time, I have successfully updated many pages on both websites in order to increase conversion rates as well as engagment while lowering the bounce rate.</p>
+    </section>
+  </div>
+  <div class="col-md-12 image-full">
+    <img src="/assets/final-photos/hi/final/hi-1.png"/>
+  </div>
+  <div class="col-md-4 col-md-offset-1 image-full">
+    <img src="/assets/final-photos/hi/final/hi-2.png"/>
+  </div>
+  <div class="col-md-4 col-md-offset-2 image-full">
+    <img src="/assets/final-photos/hi/final/hi-3.png"/>
+  </div>
+  <div class="col-lg-6 col-lg-offset-3 text-block">
+    <section id="second">
+      <h3>Form & Functionality</h3>
+      <p>The final form utilizes both wood and ceramic pieces to keep butter fresh and soft without the need of refrigeration. Filling ther ceramic bottom with water creates an air-tight seal for the exposed butter contained in the top piece, ensuring preservation.</p>
+    </section>
+  </div>
+  <div class="col-md-8 col-md-offset-2 image-full">
+    <a href="/assets/final-photos/hi/final/hi-pdf.pdf" target=_blank class="pdf">
+      <img src="/assets/final-photos/hi/final/hi-4.png" class="margin-btm"/>
+      <h5>View Proposal PDF</h5>
+    </a>
+  </div>
+  <div class="col-lg-6 col-lg-offset-3 text-block">
+    <section id="third">
+      <h3>Final Prototype</h3>
+      <p>Through the exploration of past memories of weekly Friday night dinners at my grandmother’s house, as well as extensive research into the history of everything associated with toast, I developed a revamped butter crock. The end product became a prototype made from wood as well as 3D printing meant to simulate ceramic pieces. Each iteration of the plate, butter crock, and accompanying knife took into consideration previous objects from the past, ergonomics, and issues that come about due to the use of each object.</p>
+    </section>
+  </div>
+  <div class="col-md-12 image-full">
+    <img src="/assets/final-photos/hi/final/hi-6.png" class="margin-btm"/>
+  </div>
+</div>
+<script>
+  $(document).scroll(function () {
+      var y = $(this).scrollTop();
+      if (y > 500) {
+          $('#sideMenu').fadeIn();
+      } else {
+          $('#sideMenu').fadeOut();
+      }
+  });
+</script>
+<script>
+// Cache selectors
+var lastId,
+    sideMenu = $("#sideMenu"),
+    sideMenuHeight = sideMenu.outerHeight()+15,
+    // All list items
+    menuItems = sideMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-sideMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+sideMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+</script>
+
+<!--FADE OUT SCROLL-->
+<script>
+$(window).on('scroll', function() {
+    $('.block').css('opacity', function() {
+        return 1 - ($(window).scrollTop() / $(this).outerHeight());
+    });
+});
+</script>
+
+
