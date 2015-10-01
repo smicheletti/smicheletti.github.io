@@ -1,0 +1,217 @@
+.parallax-window {
+  height: 300px;
+  margin-top: -300px;
+}
+
+.parallax-window .circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+  margin: 390px auto 0 auto;
+  color: white;
+  padding: 65px 0 0 30px;
+}
+
+.parallax-window .circle h2 {
+  padding-bottom: 5px;
+}
+
+.parallax-mirror {
+  height: 400px !important;
+  margin-top: -100px;
+}
+
+.parallax-mirror img {
+  margin-top: 100px;
+}
+
+.text-block {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  clear: both;
+}
+
+.text-block h3 {
+  color: dark-gray;
+  margin-bottom: 25px;
+  color: #4f4f4f;
+  text-align: center;
+}
+
+.text-block p {
+  font-family: Lato;
+}
+
+.text-block a {
+  color: orange;
+  transition: .3s ease-in-out;
+}
+
+.text-block a:hover {
+  opacity: .5;
+}
+
+.image-full {
+  margin-bottom: 25px;
+}
+
+.image-full img {
+  width: 100%;
+}
+
+.last-image {
+  padding-bottom: 50px;
+}
+
+#sideMenu {
+  display: none;
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  z-index: 1;
+  padding: 20px 30px;
+  box-shadow: rgba(84, 84, 84, 0.2) 0px 0px 10px;
+  height: 85px;
+}
+
+#sideMenu hr {
+  margin: 5px 0 10px 0;
+}
+
+#sideMenu p {
+  float: left;
+}
+
+#sideMenu p a {
+  color: dark-gray;
+  transition: .3s ease-in-out;
+  font-size: 1em;
+}
+
+#sideMenu p a i {
+  color: transparent;
+  transition: .3s ease-in-out;
+  margin-left: 15px;
+}
+
+#sideMenu .active a {
+  color: orange;
+}
+
+#sideMenu .active a i {
+  color: dark-gray;
+}
+
+.bottom-navigation {
+  padding-bottom: 50px;
+  font-size: 1.4em;
+}
+
+.bottom-navigation a {
+  color: orange;
+  transition: .3s ease-in-out;
+}
+
+.bottom-navigation a img {
+  width: 30px;
+  margin: 10px;
+}
+
+.bottom-navigation a:first-of-type {
+  float: left;
+}
+
+.bottom-navigation a:last-of-type {
+  float: right;
+}
+
+.bottom-navigation a:after {
+  clear: both;
+  width: 100%;
+  content: '';
+  display: block;
+}
+
+@media screen and (min-width: 640px) {
+  .text-block h3 {
+    padding: 50px 0 15px 0;
+  }
+  .text-block p {
+    width: 75%;
+    margin: 0 auto;
+  }
+  #sideMenu {
+    width: 50%;
+    left: 25%;
+  }
+  #sideMenu a:focus {
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .text-block {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  #sideMenu {
+    width: 40%;
+    left: 30%;
+  }
+  .bottom-navigation a:hover {
+    opacity: .5;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .parallax-window {
+    height: 410px;
+    margin-top: -200px;
+  }
+  .parallax-window .circle {
+    width: 300px;
+    height: 300px;
+    margin: 340px auto 0 auto;
+    padding: 100px 0 0 50px;
+  }
+  .parallax-window .circle h2 {
+    padding-bottom: 10px;
+  }
+  .parallax-mirror {
+    height: 550px !important;
+    margin-top: -140px;
+  }
+  #sideMenu {
+    width: 32%;
+    left: 34%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .image-full {
+    margin-bottom: 75px;
+  }
+  .text-block {
+    margin-bottom: 100px;
+  }
+  .bottom-navigation {
+    font-size: 1.8em;
+    padding: 0 100px 50px 100px;
+  }
+}
+
+.pdf img {
+  position: static;
+  z-index: 1;
+}
+
+.pdf h5 {
+  text-align: center;
+  color: orange;
+  position: relative;
+  padding: 10px;
+  text-decoration: underline;
+  z-index: 100;
+}

@@ -1,6 +1,6 @@
 body {
-  font-family: Montserrat;
   font-size: 10px;
+  font-family: Montserrat;
 }
 
 body h1, body h2, body h3, body h4, body h5, body p {
@@ -120,6 +120,62 @@ a {
   .container {
     max-width: 1200px;
   }
+}
+
+//Colors for Projects
+.de-color {
+  color: rgba(0, 159, 255, 0.5);
+}
+.de-background {
+  background-color: rgba(0, 159, 255, 0.5);
+}
+.sp-color {
+  color: rgba(255, 202, 0, 0.5);
+}
+.sp-background {
+  background-color: rgba(255, 202, 0, 0.5);
+}
+.el-color {
+  color: rgba(255, 53, 133, 0.5);
+}
+.el-background {
+  background-color: rgba(255, 53, 133, 0.5);
+}
+.hi-color {
+  color: rgba(255, 117, 0, 0.5);
+}
+.hi-background {
+  background-color: rgba(255, 117, 0, 0.5);
+}
+.st-color {
+  color: rgba(92, 185, 78, 0.5);
+}
+.st-background {
+  background-color: rgba(92, 185, 78, 0.5);
+}
+.mtl-color {
+  color: rgba(29, 146, 195, 0.75);
+}
+.mtl-background {
+  background-color: rgba(29, 146, 195, 0.75);
+}
+.sw-color {
+  color: rgba(255, 0, 0, 0.75);
+}
+.sw-background {
+  background-color: rgba(255, 0, 0, 0.75);
+}
+.ft-color {
+  color: rgba(37, 170, 225, 0.5);
+}
+.ft-background {
+  background-color: rgba(37, 170, 225, 0.5);
+}
+.sg-color {
+  color: rgba(133, 76, 160, 0.5);
+}
+.sg-background {
+  background-color: rgba(133, 76, 160, 0.5);
 }
 
 .hero-home {
@@ -424,7 +480,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .navbar .navbar-collapse .navbar-nav {
-    width: 281px;
+    width: 300px;
   }
   .navbar .navbar-collapse .navbar-nav a {
     color: white;
