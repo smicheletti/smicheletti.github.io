@@ -106,6 +106,7 @@
 .bottom-navigation {
   padding-bottom: 50px;
   font-size: 1.4em;
+  clear: both;
 }
 
 .bottom-navigation a {
