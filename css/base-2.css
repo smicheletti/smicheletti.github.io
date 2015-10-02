@@ -388,6 +388,10 @@ a {
   color: white;
 }
 
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+  max-height: 400px;
+}
+
 .secondary-nav {
   background-color: #FF5700;
 }
@@ -552,6 +556,20 @@ a {
 
 .footer p {
   color: white;
+}
+
+.footer h3 {
+  color: #B25968;
+}
+
+@media screen and (min-width: 992px) {
+  .footer a i {
+    transition: .3s ease-in-out;
+  }
+  .footer a:hover i {
+    color: white;
+    opacity: .5;
+  }
 }
 
 .col-home .dm hr {

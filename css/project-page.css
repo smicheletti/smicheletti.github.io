@@ -32,7 +32,6 @@
 }
 
 .text-block h3 {
-  color: dark-gray;
   color: #4f4f4f;
   text-align: center;
 }
@@ -63,7 +62,6 @@
 }
 
 #sideMenu {
-  display: none;
   position: fixed;
   top: auto;
   bottom: 0;
@@ -73,6 +71,8 @@
   padding: 20px 30px;
   box-shadow: rgba(84, 84, 84, 0.2) 0px 0px 10px;
   height: 85px;
+  left: 0;
+  z-index: 10000;
 }
 
 #sideMenu hr {
@@ -84,7 +84,7 @@
 }
 
 #sideMenu p a {
-  color: dark-gray;
+  color: #333;
   transition: .3s ease-in-out;
   font-size: 1em;
 }
@@ -95,12 +95,17 @@
   margin-left: 15px;
 }
 
+#sideMenu p a:hover {
+  text-decoration: none;
+  color: orange;
+}
+
 #sideMenu .active a {
   color: orange;
 }
 
 #sideMenu .active a i {
-  color: dark-gray;
+  color: #333;
 }
 
 .bottom-navigation {
@@ -162,6 +167,7 @@
   }
   .bottom-navigation a:hover {
     opacity: .5;
+    text-decoration: none;
   }
 }
 
@@ -184,8 +190,8 @@
     margin-top: -140px;
   }
   #sideMenu {
-    width: 32%;
-    left: 34%;
+    width: 34%;
+    left: 33%;
   }
 }
 
