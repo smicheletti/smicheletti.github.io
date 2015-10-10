@@ -6,14 +6,16 @@
     <link rel='stylesheet' href='css/base.css'>
     <link rel='stylesheet' href='css/base-2.css'>
     <link rel='stylesheet' href='css/home.css'>
+    <link rel='stylesheet' href='css/navbar.css'>
     <link rel='stylesheet' href='css/project-page.css'>
+    <link rel='stylesheet' href='css/footer.css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,400,700,900' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <div id="main-nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid" style="background-color:#FF5700;">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -21,12 +23,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Sarah Micheletti</a>
+          <a class="navbar-brand" href="index.html">Sarah Micheletti</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <button class="btn btn-default dropdown-toggle work" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 WORK
                 <span class="caret"></span>
               </button>
@@ -42,163 +44,147 @@
                 <li><a href="cerebri.html">Cerebri</a></li>
               </ul>
             </div>
-            <li><a href="/about">ABOUT</a></li>
-            <li><a href="/contact">CONTACT</a></li>
+            <li><a href="#second">ABOUT</a></li>
+            <li><a href="#third">CONTACT</a></li>
           </ul>
         </div>
-      </div>
-    </div>
-    <div class="secondary-nav" class="container-fluid" role="navigation">
-      <div class="container links">
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            WORK
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="designmatters.html">Design Matters</a></li>
-            <li><a href="spread.html">Spread</a></li>
-            <li><a href="electrocuties.html">Electrocuties</a></li>
-            <li><a href="hi.html">Hi</a></li>
-            <li><a href="512stew.html">512Stew</a></li>
-            <li><a href="improve.html">Improve</a></li>
-            <li><a href="serie.html">Serie Project</a></li>
-            <li><a href="ftapp.html">FitnessTrainer App</a></li>
-            <li><a href="cerebri.html">Cerebri</a></li>
-          </ul>
-        </div>
-        <a href="/about">ABOUT</a>
-        <a href="/contact">CONTACT</a>
-      </div>
-      <div class="container name">
-        <a class="navbar-brand" href="/">
-          <img src="" />
-          <h3>Sarah Micheletti</h3>
-        </a>
-        <p>Designer - Ocassional Developer</p>
       </div>
     </div>
 
     <div class="hero hero-home">
-      <h1>Some text here about desgin that's probably this long</h1>
-      <div class="wrapper">
-        <a href="about.html">
-          <img src="/assets/arrow-right.png">
-          <p>About Me</p>
-        </a>
+      <div class="col-lg-8 col-lg-offset-2">
+        <p>SARAH MICHELETTI</p>
+        <hr>
+        <h1 class="col-lg-10 col-lg-offset-1">I just wish I could finish this fucking page.</h1>
+        <div class="links">
+          <div id="homepageLinks">
+            <a href="#first">Work</a>
+            <a href="#second">About Me</a>
+            <a href="#third">Contact</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="container col-home">
-      <div class="row">
-        <h3>PROJECTS & WORK</h3>
+      <div class="col-sm-4 col-md-4 col-lg-4" id="first">
+        <h1>PROJECTS<br>WORK</h1>
+        <p class="lg-green">&</p>
       </div>
-      <div class="row">
-        <div class="col-sm-6 col-lg-4 dm wrapper">
-          <a href="designmatters.html">
-            <img src="https://drive.google.com/uc?id=0B0bq-JAgdr5gZFZTZ1YwbUR5SXM"/>
-            <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
-          </a>
-          <hr class="de-color">
-          <a href="designmatters.html">
-            <h2>Design Matters</h2>
-          </a>
-          <p>EXHIBITION + PRINT</p>
-        </div>
-        <div class="col-sm-6 col-lg-4 sp wrapper">
-          <a href="spread.html">
-            <img src="/assets/spread-square.png" />
-            <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
-          </a>
-          <hr class="sp-color">
-          <a href="spread.html">
-            <h2>Spread</h2>
-          </a>
-          <p>PRODUCT</p>
-        </div>
-        <div class="col-sm-6 col-lg-4 el wrapper">
+      <div class="col-xs-12 col-sm-7 col-sm-offset-1 col-md-offset-0 col-md-8 col-lg-8 el">
+        <h3 class="rotate-up">MOBILE + GAMING</h3>
+        <a href="electrocuties.html" class="link"><img src="https://cloud.githubusercontent.com/assets/8038843/10383004/71fd11d6-6def-11e5-9838-228038f0766e.png"/></a>
+        <div class="project-link">
           <a href="electrocuties.html">
-            <img src="/assets/electrocuties-square.png" />
-            <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+            <h2>ELECTROCUTIES</h2>
+            <h4>VIEW PROJECT <i class="fa fa-long-arrow-right"></i></h4>
           </a>
-          <hr class="el-color">
-          <a href="electrocuties.html">
-            <h2>Electrocuties</h2>
-          </a>
-          <p>MOBILE + GAMING</p>
-        </div>
-        <div class="col-sm-6 col-lg-4 hi wrapper">
-          <a href="hi.html">
-            <img src="/assets/hi-square.png" />
-            <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
-          </a>
-          <hr class="hi-color">
-          <a href="hi.html">
-            <h2>Hi</h2>
-          </a>
-          <p>PRINT + SYMBOL</p>
-        </div>
-        <div class="col-sm-6 col-lg-4 st wrapper">
-          <a href="512stew.html">
-            <img src="/assets/512stew-square.png" />
-            <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
-          </a>
-          <hr class="st-color">
-          <a href="512stew.html">
-            <h2>512Stew</h2>
-          </a>
-          <p>PRINT + PROJECT MANAGEMENT</p>
-        </div>
-        <div class="col-sm-6 col-lg-4 mtl wrapper">
-          <a href="improve.html">
-            <img src="/assets/mtl-fitnesstrainer-square.png" />
-            <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
-          </a>
-          <hr class="mtl-color">
-          <a href="improve.html">
-            <h2>Improve</h2>
-          </a>
-          <p>WEB + ECOMMERCE</p>
         </div>
       </div>
-      <div class="row">
-        <h3>WORK IN PROGRESS</h3>
+      <div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-7 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 de">
+        <div class="project-link">
+          <a href="designmatters.html">
+            <h2>DESIGN MATTERS</h2>
+            <h4>VIEW PROJECT <i class="fa fa-long-arrow-right"></i></h4>
+          </a>
+        </div>
+        <a href="designmatters.html" class="link"><img src="https://cloud.githubusercontent.com/assets/8038843/10383003/71fcb3bc-6def-11e5-8ce2-d2049ea249a7.png" /></a>
+        <h3 class="rotate-down">EXHIBITION + PRINT</h3>
       </div>
-      <div class="row">
-        <div class="col-sm-6 col-lg-4 sw wrapper">
-          <a href="seriewebsite.html">
-            <img src="/assets/serie-website-square.png" />
-            <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+      <div class="col-xs-12 col-md-8 col-lg-8 sp">
+        <h3>PRODUCT</h3>
+        <a href="spread.html" class="link"><img src="https://cloud.githubusercontent.com/assets/8038843/10383007/720c763a-6def-11e5-95bd-da61c7c2657f.png" /></a>
+        <div class="project-link">
+          <a href="spread.html">
+            <h2>SPREAD</h2>
+            <h4>VIEW PROJECT <i class="fa fa-long-arrow-right"></i></h4>
           </a>
-          <hr class="sw-color">
-          <a href="seriewebsite.html">
-            <h2>Serie Website</h2>
-          </a>
-          <p>WEB + ECOMMERCE</p>
         </div>
-        <div class="col-sm-6 col-lg-4 ft wrapper">
-          <a href="ftapp.html">
-            <img src="/assets/fitnesstrainer-app-blue-square.png" />
-            <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+      </div>
+      <div class="col-xs-10 col-xs-offset-2 col-sm-5 col-sm-offset-6 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 hi">
+        <h3 class="rotate-up">PROPOSAL + PRINT</h3>
+        <a href="hi.html" class="link"><img src="https://cloud.githubusercontent.com/assets/8038843/10383000/71fc044e-6def-11e5-8eb9-5240d4e90c37.png" /></a>
+        <div class="project-link">
+          <a href="hi.html">
+            <h2>HI</h2>
+            <h4>VIEW PROJECT <i class="fa fa-long-arrow-right"></i></h4>
           </a>
-          <hr class="ft-color">
-          <a href="ftapp.html">
-            <h2>FitnessTrainer App</h2>
-          </a>
-          <p>MOBILE + APP</p>
         </div>
-        <div class="col-sm-6 col-lg-4 sg wrapper">
-          <a href="seriegallery.html">
-            <img src="/assets/serie-project-square.png" />
-            <p class="text">View Project<img src="/assets/arrow-right.png"/></p>
+      </div>
+      <div class="col-xs-12 col-sm-7 col-sm-offset-1 col-md-8 col-lg-8 st">
+        <h3 class="rotate-down">PRINT</h3>
+        <a href="512stew.html" class="link"><img src="https://cloud.githubusercontent.com/assets/8038843/10383002/71fc8edc-6def-11e5-9c27-79e4f063c4cd.png" /></a>
+        <div class="project-link">
+          <a href="512stew.html">
+            <h2>512STEW</h2>
+            <h4>VIEW PROJECT <i class="fa fa-long-arrow-right"></i></h4>
           </a>
-          <hr class="sg-color">
-          <a href="seriegallery.html">
-            <h2>Serie Gallery & Community Center</h2>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wip">
+        <h1>WORK<br>PROGRESS</h1>
+        <p class="lg-green">IN</p>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-sm-offset-2 col-md-8 col-md-offset-0 col-lg-8 ft">
+        <h3 class="rotate-up">MOBILE + PRODUCT</h3>
+        <a href="ftapp.html" class="link"><img src="https://cloud.githubusercontent.com/assets/8038843/10383001/71fc2730-6def-11e5-99bd-0c08559d7f44.png"/></a>
+        <div class="project-link">
+          <a href="ftapp.html">
+            <h2>FT APP</h2>
+            <h4>VIEW WORK <i class="fa fa-long-arrow-right"></i></h4>
           </a>
-          <p>ENVIRONMENT</p>
+        </div>
+      </div>
+      <div class="col-xs-10 col-xs-offset-2 col-sm-8 col-sm-offset-1 col-md-8 col-md-offset-0 col-lg-8 im">
+        <h3>WEB + ECOMMERCE</h3>
+        <a href="improve.html" class="link"><img src="https://cloud.githubusercontent.com/assets/8038843/10383005/71fd04ca-6def-11e5-823a-2b84cf6d3e91.png" /></a>
+        <div class="project-link">
+          <a href="improve.html">
+            <h2>IMPROVE</h2>
+            <h4>VIEW WORK <i class="fa fa-long-arrow-right"></i></h4>
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-5 col-sm-offset-7 col-md-8 col-md-offset-4 col-lg-8 col-lg-offset-4 se">
+        <div class="project-link">
+          <a href="serie.html">
+            <h2>SERIE PROJECT</h2>
+            <h4>VIEW WORK <i class="fa fa-long-arrow-right"></i></h4>
+          </a>
+        </div>
+        <a href="serie.html" class="link"><img src="https://cloud.githubusercontent.com/assets/8038843/10383006/720c57f4-6def-11e5-90e8-485bff454066.png" /></a>
+        <h3 class="rotate-down">WEB + SPACE</h3>
+      </div>
+      <div class="row" id="second" style="clear:both;">
+        <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+          <h1 style="text-align:center">ABOUT ME</h1>
+        </div>
+        <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-2">
+          <img src="https://cloud.githubusercontent.com/assets/8038843/10408360/2c0a907c-6ec1-11e5-8b03-e14e66e69f94.jpg" />
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-1">
+          <h2>Hola, welcome to my domain.</h2>
+          <p>Currently working in Austin, TX as a recent graduate, </p>
+          <p>Motivation. ethics does it help people? perfectionist. Motivation. ethics does it help people? perfectionist. Motivation. ethics does it help people? perfectionist. Motivation. ethics does it help people? perfectionist.</p>
+          <p>Motivation. ethics does it help people? perfectionist. Motivation. ethics does it help people? perfectionist. Motivation. ethics does it help people? perfectionist. Motivation. ethics does it help people? perfectionist.</p>
+        </div>
+      </div>
+      <div class="row" id="third" style="clear:both;">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6">
+          <h2>Feel free to get in touch!</h2>
+        </div>
+        <div class="col-xs-12">
+          <h4>EMAIL</h4>
+          <a href="mailto:sarah.c.micheletti@gmail.com">sarah.c.micheletti@gmail.com</a> 
+          <h4>MEDIA</h4>
+          <div class="row">
+            <a href="https://www.linkedin.com/in/sarahmicheletti" class="col-xs-4 col-xs-offset-2 col-sm-4">LinkedIn</a>
+            <a href="https://www.behance.net/sarahmicheletti" class="col-xs-4 col-sm-4">Behance</a>
+          </div>
         </div>
       </div>
     </div>
+
+
 
     <div class="footer">
       <div class="container">
@@ -224,6 +210,54 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
     <script src="/assets/javascript/parallax.js"></script>
+
+    <script>
+      // Cache selectors
+      var lastId,
+          sideMenu = $("#homepageLinks"),
+          sideMenuHeight = sideMenu.outerHeight()+15,
+          // All list items
+          menuItems = sideMenu.find("a"),
+          // Anchors corresponding to menu items
+          scrollItems = menuItems.map(function(){
+            var item = $($(this).attr("href"));
+            if (item.length) { return item; }
+          });
+
+      // Bind click handler to menu items
+      // so we can get a fancy scroll animation
+      menuItems.click(function(e){
+        var href = $(this).attr("href"),
+            offsetTop = href === "#" ? 0 : $(href).offset().top-sideMenuHeight+1;
+        $('html, body').stop().animate({ 
+            scrollTop: offsetTop
+        }, 300);
+        e.preventDefault();
+      });
+
+      // Bind to scroll
+      $(window).scroll(function(){
+         // Get container scroll position
+         var fromTop = $(this).scrollTop()+sideMenuHeight;
+         
+         // Get id of current scroll item
+         var cur = scrollItems.map(function(){
+           if ($(this).offset().top < fromTop)
+             return this;
+         });
+         // Get the id of the current element
+         cur = cur[cur.length-1];
+         var id = cur && cur.length ? cur[0].id : "";
+         
+         if (lastId !== id) {
+             lastId = id;
+             // Set/remove active class
+             menuItems
+               .parent().removeClass("active")
+               .end().filter("[href=#"+id+"]").parent().addClass("active");
+         }                   
+      });
+    </script>
 
     <script>
       $(document).scroll(function () {

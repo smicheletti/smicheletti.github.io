@@ -1,0 +1,196 @@
+.navbar {
+  opacity: .9;
+  border: none;
+}
+.navbar .navbar-header {
+  background-color: rgba(255, 50, 19, 0.75);;
+}
+.navbar .navbar-header a {
+  color: white;
+}
+.navbar .navbar-header button {
+  background-color: transparent;
+  border: none;
+}
+.navbar .navbar-header button .icon-bar {
+  background-color: white;
+  transition: .2s ease-in-out;
+  -webkit-transition: .2s ease-in-out;
+}
+.navbar .navbar-header .navbar-toggle {
+  background-color: transparent;
+  border: none;
+}
+.navbar .navbar-header button:hover {
+  background-color: transparent;
+}
+.navbar .navbar-header button:hover .icon-bar {
+  opacity: .5;
+}
+.navbar .navbar-collapse {
+  font-size: 1.4em;
+}
+.navbar .navbar-collapse button {
+  background-color: transparent;
+  border: transparent;
+  border-radius: 0;
+  color: white;
+}
+.navbar .container-fluid {
+  background-color: rgba(255, 50, 19, 0.75);
+}
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+  max-height: 400px;
+}
+
+/* SECONDARY NAVIGATION */
+
+.secondary-nav {
+  background-color: #5968a5;
+}
+
+.secondary-nav .links {
+  text-align: right;
+  padding: 10px 20px 25px 0;
+  font-size: 1.2em;
+  width: 280px;
+  float: right;
+}
+
+.secondary-nav .links a {
+  padding: 0 20px;
+}
+
+.secondary-nav .links .dropdown button {
+  color: white;
+  background-color: transparent;
+  padding: 0;
+  float: left;
+  border: none;
+  font-size: 1em;
+}
+
+.secondary-nav .links .dropdown button:focus {
+  background-color: transparent;
+}
+
+.secondary-nav .links .dropdown .dropdown-menu {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 0;
+}
+
+.secondary-nav .links .dropdown .dropdown-menu a {
+  color: #5968a5;
+}
+
+.secondary-nav .links .dropdown .dropdown-menu li {
+  padding-bottom: 10px;
+}
+
+.secondary-nav .name .navbar-brand {
+  height: auto;
+  padding: 0;
+  width: 75%;
+}
+
+.secondary-nav .name .navbar-brand img {
+  height: 25px;
+  width: 25px;
+  float: left;
+  margin-right: 10px;
+}
+
+.secondary-nav .name .navbar-brand h3 {
+  font-size: 1em;
+  color: white;
+  padding: 0;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.secondary-nav .name p {
+  clear: both;
+  padding-left: 50px;
+  color: white;
+}
+
+@media screen and (min-width: 640px) {
+  .navbar .navbar-header {
+    background-color: transparent;
+  }
+  .navbar .navbar-collapse ul {
+    padding: 0 20px;
+    text-align: right;
+  }
+  .secondary-nav .links {
+    padding-top: 20px;
+  }
+  .secondary-nav .name {
+    margin-left: 20px;
+  }
+  .secondary-nav .name .navbar-brand {
+    margin-top: 10px;
+  }
+  .secondary-nav .name p {
+    clear: none;
+    margin-top: 35px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar .navbar-collapse .navbar-nav {
+    width: 300px;
+  }
+  .navbar .navbar-collapse .navbar-nav a {
+    color: white;
+  }
+  .navbar .navbar-collapse .navbar-nav p {
+    font-size: 1.2em;
+  }
+  .navbar .navbar-collapse .dropdown button {
+    color: white;
+    background-color: transparent;
+    padding: 0 15px 0 0;
+    margin-top: 15px;
+    float: left;
+    border: none;
+    font-size: 1em;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+  }
+  .navbar .navbar-collapse .dropdown button:focus {
+    background-color: transparent;
+  }
+  .navbar .navbar-collapse .dropdown button:active {
+    box-shadow: none;
+  }
+  .navbar .navbar-collapse .dropdown button:hover {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .navbar .navbar-collapse .dropdown .dropdown-menu {
+    margin: 40px 155px 0 0;
+    background-color: white;
+    border-radius: 0;
+    padding: 10px 0;
+    text-align: left;
+  }
+  .navbar .navbar-collapse .dropdown .dropdown-menu li a {
+    color: #FF5700;
+  }
+  .navbar .navbar-collapse li {
+    padding-bottom: 5px;
+  }
+  .navbar .navbar-collapse li a {
+    color: #5968a5;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+  }
+  .navbar .navbar-collapse li:hover a {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .secondary-nav .name p {
+    font-size: 1.2em;
+  }
+}

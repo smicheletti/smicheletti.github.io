@@ -41,7 +41,7 @@
 }
 
 .text-block a {
-  color: orange;
+  color: #7a85c4;
   transition: .3s ease-in-out;
 }
 
@@ -97,11 +97,11 @@
 
 #sideMenu p a:hover {
   text-decoration: none;
-  color: orange;
+  color: #7a85c4;
 }
 
 #sideMenu .active a {
-  color: orange;
+  color: #7a85c4;
 }
 
 #sideMenu .active a i {
@@ -115,7 +115,7 @@
 }
 
 .bottom-navigation a {
-  color: orange;
+  color: #7a85c4;
   transition: .3s ease-in-out;
 }
 
@@ -215,7 +215,7 @@
 
 .pdf h5 {
   text-align: center;
-  color: orange;
+  color: #7a85c4;
   position: relative;
   padding: 10px;
   text-decoration: underline;
