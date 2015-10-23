@@ -6,7 +6,7 @@
   background-color: rgba(255, 50, 19, 0.75);;
 }
 .navbar .navbar-header a {
-  color: white;
+  color: rgb(255, 50, 19);
 }
 .navbar .navbar-header button {
   background-color: transparent;
@@ -30,17 +30,42 @@
 .navbar .navbar-collapse {
   font-size: 1.4em;
 }
+.navbar-collapse .navbar-nav>li>a {
+  color: rgb(255, 50, 19);
+  transition: .3s ease-in-out;
+}
+.navbar-collapse .navbar-nav>li>a:hover {
+  color: rgba(255, 50, 19, 0.5);
+}
 .navbar .navbar-collapse button {
   background-color: transparent;
   border: transparent;
   border-radius: 0;
-  color: white;
+  color: rgb(255, 50, 19);
+}
+#main-nav {
+  background-color: transparent;
 }
 .navbar .container-fluid {
-  background-color: rgba(255, 50, 19, 0.75);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
   max-height: 400px;
+}
+.navbar .dropdown:focus {
+  outline: none;
+}
+.btn-default.active, .btn-default:active, .btn-default:focus, .open>.dropdown-toggle.btn-default {
+  background-color: transparent !important;
+  color: rgb(255, 50, 19) !important;
+  box-shadow: none;
+  outline: none;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: rgb(255, 50, 19);
+}
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+  color: rgb(255, 50, 19);
 }
 
 /* SECONDARY NAVIGATION */
@@ -48,21 +73,29 @@
 .secondary-nav {
   background-color: rgba(255, 50, 19, 0.75);
 }
+.secondary-nav:after {
+  clear: both;
+  width: 100%;
+  content: '';
+  display: block;
+}
 
 .secondary-nav .links {
   text-align: right;
-  padding: 10px 20px 25px 0;
+  padding: 10px 20px 5px 0;
   font-size: 1.2em;
-  width: 280px;
-  float: right;
 }
 
 .secondary-nav .links a {
-  padding: 0 20px;
+  padding: 0 10px;
+}
+.secondary-nav .links a:hover {
+  color: rgb(255, 50, 19);
+  text-decoration: none;
 }
 
 .secondary-nav .links .dropdown button {
-  color: white;
+  color: rgb(255, 50, 19);
   background-color: transparent;
   padding: 0;
   float: left;
@@ -81,38 +114,29 @@
 }
 
 .secondary-nav .links .dropdown .dropdown-menu a {
-  color: #5968a5;
+  color: rgba(255, 50, 19, 0.75);
 }
 
 .secondary-nav .links .dropdown .dropdown-menu li {
   padding-bottom: 10px;
 }
-
-.secondary-nav .name .navbar-brand {
-  height: auto;
-  padding: 0;
-  width: 75%;
+.secondary-nav .navbar-brand {
+  height: 30px;
 }
-
-.secondary-nav .name .navbar-brand img {
+.secondary-nav .navbar-brand img {
   height: 25px;
   width: 25px;
   float: left;
   margin-right: 10px;
 }
 
-.secondary-nav .name .navbar-brand h3 {
-  font-size: 1em;
-  color: white;
+.secondary-nav .col-xs-9 {
   padding: 0;
-  text-align: left;
   margin-top: 5px;
 }
 
-.secondary-nav .name p {
-  clear: both;
-  padding-left: 50px;
-  color: white;
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: rgb(255, 50, 19);
 }
 
 @media screen and (min-width: 640px) {
@@ -143,13 +167,16 @@
     width: 300px;
   }
   .navbar .navbar-collapse .navbar-nav a {
-    color: white;
+    color: rgb(255, 50, 19);
   }
   .navbar .navbar-collapse .navbar-nav p {
     font-size: 1.2em;
   }
+  .navbar-collapse .navbar-nav>li>a:hover {
+    color: rgb(255, 50, 19, 0.5);
+  }
   .navbar .navbar-collapse .dropdown button {
-    color: white;
+    color: rgb(255, 50, 19);
     background-color: transparent;
     padding: 0 15px 0 0;
     margin-top: 15px;
@@ -164,10 +191,11 @@
   }
   .navbar .navbar-collapse .dropdown button:active {
     box-shadow: none;
+    color: rgba(255, 50, 19, 0.5)!important;
   }
   .navbar .navbar-collapse .dropdown button:hover {
     background-color: transparent;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 50, 19, 0.5);
   }
   .navbar .navbar-collapse .dropdown .dropdown-menu {
     margin: 40px 155px 0 0;
@@ -183,12 +211,12 @@
     padding-bottom: 5px;
   }
   .navbar .navbar-collapse li a {
-    color: #5968a5;
+    color: rgba(255, 50, 19, 0.75);
     transition: .3s ease-in-out;
     -webkit-transition: .3s ease-in-out;
   }
   .navbar .navbar-collapse li:hover a {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 50, 19, 0.5);
   }
   .secondary-nav .name p {
     font-size: 1.2em;

@@ -1,6 +1,10 @@
 body {
   font-size: 10px;
   font-family: Montserrat;
+  background-color: #FCFCFC;
+}
+
+.home {
   background-image: url('https://cloud.githubusercontent.com/assets/8038843/10412101/f5ad80e0-6f40-11e5-89e3-1d6fef6184ee.png');;
   background-position-y: 0;
   background-repeat: no-repeat;
@@ -37,6 +41,7 @@ h5 {
 
 p {
   font-size: 1.4em;
+  font-family: Open Sans;
 }
 
 .small {
@@ -270,6 +275,9 @@ a {
     text-align: center;
     font-size: 4em;
   }
+  .hero-home .links {
+    width: 395px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -279,14 +287,14 @@ a {
   .hero-home .wrapper {
     margin-right: 100px;
   }
-  .hero-home .links {
-    width: 395px;
-  }
   .hero-home .links a {
     padding: 0 30px;
   }
   .hero-home h1 {
     padding: 80px 20px 50px 20px;
+  }
+  .hero-home .links {
+    width: 324px;
   }
 }
 
@@ -903,31 +911,40 @@ a {
   }
 }
 
-/* ABOUT ME SECTION */
-#second, #third {
-  font-family: Lato;
+/* ABOUT ME Page */
+.about .photo img {
+  width: 100%;
+  border-radius: 300px;
 }
-#second {
-  clear: both;
-  padding-top: 125px;
+.about a {
+  color: rgba(255, 50, 19, 0.75);
+  transition: .3s ease-in-out;
 }
-#second h1 {
-  color: #FFF;
-  padding-bottom: 25px;
+.about a:hover {
+  color: rgba(255, 50, 19, 0.25);
+  text-decoration: none;
 }
-#second h3 {
-  padding-bottom: 15px;
-  text-align: left;
-  padding: 0;
-  float: none;
+.about p {
+  padding-top: 15px;
 }
-#second p {
+.about p:last-of-type {
+  margin-bottom: 25px;
+}
+.about h3 {
+  color: rgba(255, 50, 19, 0.75);
   padding: 10px 0;
 }
-#second img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
+.about hr {
+  margin: 10px 0;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+}
+@media screen and (min-width: 768px) {
+  .about .top-buffer {
+    margin-top: 25px;
+  }
+  .about h3 {
+    font-size: 1.6em;
+  }
 }
 
 /* CONTACT SECTION */

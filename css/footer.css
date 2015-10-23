@@ -1,13 +1,4 @@
 .footer {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f4e3ba+100 */
-  background: rgb(255,255,255); /* Old browsers */
-  background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(244,227,186,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(244,227,186,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(244,227,186,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(244,227,186,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(244,227,186,1) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(244,227,186,1) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f4e3ba',GradientType=0 ); /* IE6-9 */
   padding: 75px 25px 50px 25px;
   text-align: center;
   font-family: Montserrat;
@@ -18,29 +9,21 @@
 }
 
 .footer a i {
-  font-size: 2.6em;
-  color: #16C75E;
+  font-size: 2.2em;
+  color: rgba(255, 50, 19, 0.75);
+  transition: .3s ease-in-out;
 }
 
 .footer p {
   color: rgba(60, 60, 60, 0.75);
-}
-
-.footer .small {
-  font-size: 1em;
-}
-.footer h3 {
-  color: rgba(255, 50, 19, 0.5);
+  font-size: 1.2em;
 }
 
 @media screen and (min-width: 992px) {
   .footer {
     padding: 150px 0 75px 0;
   }
-  .footer a i {
-    transition: .3s ease-in-out;
-  }
   .footer a:hover i {
-    color: rgba(22, 199, 94, 0.5);
+    color: rgba(255, 50, 19, 0.25);
   }
 }
