@@ -1,13 +1,13 @@
 .parallax-window {
-  height: 300px;
-  margin-top: -300px;
+  height: 400px;
+  padding-top: 300px;
 }
 
 .parallax-window .circle {
   width: 200px;
   height: 200px;
   border-radius: 150px;
-  margin: 390px auto 0 auto;
+  margin: -200px auto 0 auto;
   color: white;
   padding: 65px 0 0 30px;
 }
