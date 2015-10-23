@@ -50,7 +50,8 @@
 }
 
 .image-full {
-  margin-bottom: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .image-full img {
@@ -220,4 +221,30 @@
   padding: 10px;
   text-decoration: underline;
   z-index: 100;
+}
+
+
+.question h1 {
+  font-size: 6em;
+  color: #FAD168;
+  margin: -100px 0 0 200px;
+  text-shadow:
+    -1px -1px 0 #E6472C,  
+    1px -1px 0 #E6472C,
+    -1px 1px 0 #E6472C,
+    1px 1px 0 #E6472C;
+    line-height: 1.3em;
+}
+.question .lg-green {
+  color: #2be275;
+  opacity: .5;
+  font-size: 10em;
+  font-weight: bold;
+}
+
+#second, #third {
+  padding: 0;
+}
+#second h3 {
+  padding: 50px 0 15px 0;
 }

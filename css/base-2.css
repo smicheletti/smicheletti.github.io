@@ -43,6 +43,10 @@ p {
   font-size: 1.2em;
 }
 
+.green {
+  color: #16C75E;
+}
+
 a {
   color: white;
 }
@@ -212,6 +216,11 @@ a {
 .hero-home hr {
   width: 60px;
   margin-top: 10px;
+  border: 1px solid white;
+}
+
+.hero-home .links a {
+  text-decoration: none;
 }
 
 .hero-home .links a:focus,
@@ -364,7 +373,7 @@ a {
     1px -1px 0 #E6472C,
     -1px 1px 0 #E6472C,
     1px 1px 0 #E6472C;
-    line-height: 1.3em;
+  line-height: 1.3em;
 }
 .col-home h2 {
   color: #FF3213;
@@ -958,31 +967,6 @@ a {
   #third {
     padding-top: 50px;
   }
-}
-
-.col-home .dm hr {
-  color: rgba(0, 159, 255, 0.5);
-}
-
-.col-home .sp hr {
-  color: rgba(255, 202, 0, 0.5);
-}
-
-.col-home .sp .color {
-  background-color: black;
-  height: 205px;
-}
-
-.col-home .el hr {
-  color: rgba(255, 0, 0, 0.5);
-}
-
-.col-home .st hr {
-  color: rgba(92, 185, 78, 0.5);
-}
-
-.col-home .hi hr {
-  color: rgba(255, 117, 0, 0.5);
 }
 
 
