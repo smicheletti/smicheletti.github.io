@@ -1,3 +1,35 @@
+.mobile-background {
+  height: 400px;
+  padding-top: 300px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.mobile-background .circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+  margin: -200px auto 0 auto;
+  color: white;
+  padding: 65px 0 0 30px;
+  background-color: rgba(255, 78, 52, 0.85);
+}
+
+.mobile-background .circle h2 {
+  padding-bottom: 5px;
+}
+.parallax-window, .parallax-mirror {
+  display: none;
+}
+@media screen and (min-width:768px) {
+  .parallax-window, .parallax-mirror {
+    display: block;
+  }
+  .mobile-background {
+    display: none;
+  }
+}
+
 .parallax-window {
   height: 400px;
   padding-top: 300px;
