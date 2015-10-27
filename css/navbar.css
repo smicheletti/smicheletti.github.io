@@ -71,7 +71,8 @@
 /* SECONDARY NAVIGATION */
 
 .secondary-nav {
-  background-color: rgba(255, 50, 19, 0.75);
+  background-color: rgb(252, 252, 252);
+  height: 85px;
 }
 .secondary-nav:after {
   clear: both;
@@ -81,13 +82,15 @@
 }
 
 .secondary-nav .links {
-  text-align: right;
-  padding: 10px 20px 5px 0;
   font-size: 1.2em;
 }
 
 .secondary-nav .links a {
-  padding: 0 10px;
+  padding-right: 20%;
+  color: #FF4E34;
+}
+.secondary-nav .links a:last-of-type {
+  padding-right: 0;
 }
 .secondary-nav .links a:hover {
   color: rgb(255, 50, 19);
@@ -98,9 +101,10 @@
   color: rgb(255, 50, 19);
   background-color: transparent;
   padding: 0;
-  float: left;
   border: none;
   font-size: 1em;
+  padding-right: 20%;
+  float: left;
 }
 
 .secondary-nav .links .dropdown button:focus {
@@ -122,17 +126,8 @@
 }
 .secondary-nav .navbar-brand {
   height: 30px;
-}
-.secondary-nav .navbar-brand img {
-  height: 25px;
-  width: 25px;
-  float: left;
-  margin-right: 10px;
-}
-
-.secondary-nav .col-xs-9 {
-  padding: 0;
-  margin-top: 5px;
+  text-align: left;
+  padding: 20px 0 30px 0;
 }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
@@ -153,16 +148,21 @@
   .secondary-nav .name {
     margin-left: 20px;
   }
-  .secondary-nav .name .navbar-brand {
-    margin-top: 10px;
+  .secondary-nav .navbar-brand {
+    padding: 0;
   }
-  .secondary-nav .name p {
-    clear: none;
-    margin-top: 35px;
+  .secondary-nav .links .dropdown button {
+    margin-left: 9%;
+  }
+  #main-nav .navbar-brand {
+    margin-left: 0;
   }
 }
 
 @media screen and (min-width: 768px) {
+  .secondary-nav {
+    height: 60px;
+  }
   .navbar .navbar-collapse .navbar-nav {
     width: 300px;
   }
@@ -203,9 +203,6 @@
     border-radius: 0;
     padding: 10px 0;
     text-align: left;
-  }
-  .navbar .navbar-collapse .dropdown .dropdown-menu li a {
-    color: #FF5700;
   }
   .navbar .navbar-collapse li {
     padding-bottom: 5px;

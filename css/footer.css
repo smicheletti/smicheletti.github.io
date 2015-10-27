@@ -21,7 +21,7 @@
 
 @media screen and (min-width: 992px) {
   .footer {
-    padding: 150px 0 75px 0;
+    padding: 150px 0 25px 0;
   }
   .footer a:hover i {
     color: rgba(255, 50, 19, 0.25);

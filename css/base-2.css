@@ -4,12 +4,12 @@ body {
   background-color: #FCFCFC;
 }
 
-.home {
+/*.home {
   background-image: url('https://cloud.githubusercontent.com/assets/8038843/10412101/f5ad80e0-6f40-11e5-89e3-1d6fef6184ee.png');;
   background-position-y: 0;
   background-repeat: no-repeat;
   background-size: contain;
-}
+}*/
 
 body h1, body h2, body h3, body h4, body h5, body p {
   margin: 0;
@@ -196,10 +196,18 @@ a {
 }
 
 .hero-home {
-  height: 325px;
+  height: 200px;
   /*background-image: url('https://cloud.githubusercontent.com/assets/8038843/10240472/075b2bee-68a2-11e5-8cec-eba35e010553.png');*/
   background-size: cover;
   background-position: center bottom;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9cb55+0,f9cb55+24,ffffff+100&amp;1+24,0+100 */
+  background: -moz-linear-gradient(top,  rgba(249,203,85,1) 0%, rgba(249,203,85,1) 24%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(249,203,85,1)), color-stop(24%,rgba(249,203,85,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(249,203,85,1) 0%,rgba(249,203,85,1) 24%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(249,203,85,1) 0%,rgba(249,203,85,1) 24%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(249,203,85,1) 0%,rgba(249,203,85,1) 24%,rgba(255,255,255,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(249,203,85,1) 0%,rgba(249,203,85,1) 24%,rgba(255,255,255,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9cb55', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 .hero-home h1 {
@@ -239,8 +247,9 @@ a {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 280px;
+  width: 284px;
   clear: both;
+  padding-top: 20px;
 }
 
 .hero-home .links .navbar-collapse {
@@ -267,9 +276,6 @@ a {
 }
 
 @media screen and (min-width: 640px) {
-  .hero-home {
-    height: 425px;
-  }
   .hero-home h1 {
     padding: 50px 100px 50px 100px;
     text-align: center;
@@ -282,7 +288,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .hero-home {
-    height: 500px;
+    height: 200px;
   }
   .hero-home .wrapper {
     margin-right: 100px;
@@ -291,13 +297,17 @@ a {
     padding: 0 30px;
   }
   .hero-home h1 {
-    padding: 80px 20px 50px 20px;
+    padding: 40px 20px 50px 20px;
   }
   .hero-home .links {
-    width: 324px;
+    width: 355px;
   }
 }
-
+@media screen and (min-width: 992px) {
+  .hero-home {
+    height: 300px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .hero-home .wrapper {
     margin-right: 300px;
@@ -308,6 +318,10 @@ a {
   .hero-home .wrapper {
     margin-right: 500px;
   }
+}
+
+.col-home {
+  padding-bottom: 50px;
 }
 
 .col-home img {
@@ -375,7 +389,7 @@ a {
 }
 .col-home h1 {
   font-size: 4em;
-  color: #FCE3A2;
+  color: #FCFCFC;
   text-shadow:
     -1px -1px 0 #E6472C,  
     1px -1px 0 #E6472C,
@@ -401,7 +415,7 @@ a {
   padding: 0;
 }
 .col-home h4 {
-  color: #16C75E;
+  color: #FF3213;
   font-weight: normal;
   margin: 5px 0 0 25px;
   transition: .3s ease-in-out;
@@ -650,7 +664,6 @@ a {
 @media screen and (min-width: 992px) {
   .col-home h1 {
     font-size: 5em;
-    color: #F9CB55;
   }
   .col-home h2 {
     font-size: 3.6em;
