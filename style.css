@@ -1,3 +1,80 @@
 body {
-	background-color: red;
+	font-family: 'Lora', serif;
+	font-size: 10px;
+	background-color: #9CAA81;
+	background-image: url('grid.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: 20px;
+	background-position-x: 25px;
+	color: #2C322C;
+	font-weight: 700;
+	margin: 0 0 60px 0;
+}
+h1 {
+	font-size: 2.4em;
+}
+h2 {
+	font-size: 2.4em;
+	margin: 5px 0 0 0;
+}
+h3 {
+	font-size: 1.8em;
+	margin: 0;
+}
+header {
+	margin: 10px 20px 0;
+}
+header h3 {
+	font-size: 1.4em;
+}
+a {
+	color: #2C322C;
+}
+ul {
+	list-style: none;
+	font-size: 1.4em;
+	margin: 0;
+	padding: 0;
+	text-align: right;
+}
+li {
+	display: inline;
+	padding: 0 10px;
+}
+.col-xs-6 {
+	width: 50%;
+	float: left;
+}
+.logo-xs {
+	font-size: 2em;
+	text-align: center;
+	padding: 30px 0 75px 0;
+	clear: both;
+}
+.logo-lg {
+	display: none;
+}
+.title {
+	background-image: url('block.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 275px;
+	height: 80px;
+	margin-left: 5%;
+}
+.title h1 {
+	margin: 0;
+	line-height: .8em;
+	padding: 1em 0;
+	text-align: center;
+}
+.item {
+	width: 310px;
+	margin-left: 5%;
+	display: block;
+	padding-top: 30px;
+}
+@media screen and (min-width: 678px) {
+
 }
