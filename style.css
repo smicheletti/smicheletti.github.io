@@ -5,8 +5,8 @@ body {
 	background-image: url('grid.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position-y: 20px;
-	background-position-x: 25px;
+	background-position: -30px 20px;
+	background-size: 1034px 1034px;
 	color: #2C322C;
 	font-weight: 700;
 	margin: 0 0 60px 0;
