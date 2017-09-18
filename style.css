@@ -93,6 +93,9 @@ li {
 .photo {
 	display: none;
 }
+img {
+	display: none;
+}
 @media screen and (min-width: 500px) {
 	.title {
 		margin-left: 10%;
@@ -160,6 +163,7 @@ li {
 	}
 	img {
 		width: 100%;
+		display: block;
 	}
 	.hidden-md {
 		display: none;
