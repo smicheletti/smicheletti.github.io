@@ -16,23 +16,24 @@ body {
 	height: 100vh;
 }
 h1 {
-	font-size: 2.4em;
+	font-size: 2.2em;
 }
 h2 {
-	font-size: 2.4em;
-	margin: 5px 0 0 0;
+	font-size: 2em;
+	margin: 0;
 }
 h3 {
 	font-size: 1.8em;
 	margin: 0;
 }
 header {
-	margin: 0 20px 0;
+	margin: 0 10px 0;
 	padding-top: 10px;
 	display: flex;
 }
 header h3 {
-	font-size: 1.4em;
+	font-size: 1.2em;
+	line-height: 1.6em;
 }
 a {
 	color: #2C322C;
@@ -46,20 +47,28 @@ ul {
 }
 li {
 	display: inline;
-	padding: 0 10px;
+	padding: 0 0 0 10px;
+	font-size: .9em;
 }
 .col-xs-6 {
 	width: 50%;
 	float: left;
 }
+.col-xs-12 {
+	width: 100%;
+}
 .logo-xs {
-	font-size: 2em;
+	text-decoration: none;
+}
+.logo-xs h3 {
 	text-align: center;
-	padding: 30px 0 75px 0;
+	padding: 30px 0 50px 0;
 	clear: both;
+	font-size: 2em;
 }
 .logo-lg {
 	display: none;
+	text-decoration: none;
 }
 .title {
 	background-image: url('block.png');
@@ -71,7 +80,7 @@ li {
 }
 .title h1 {
 	margin: 0;
-	line-height: .8em;
+	line-height: 1em;
 	padding: 1em 0;
 	text-align: center;
 }
@@ -84,39 +93,114 @@ li {
 .photo {
 	display: none;
 }
+@media screen and (min-width: 500px) {
+	.title {
+		margin-left: 10%;
+	}
+	.item {
+		margin-left: 20%;
+	}
+}
 @media screen and (min-width: 678px) {
+	h2 {
+		font-size: 2.4em;
+		margin: 5px 0 0 0;
+	}
 	.logo-xs {
 		display: none;
 	}
 	.logo-lg {
 		display: inline;
 	}
+	.content {
+		margin-top: 50px;
+	}
 	.photo {
 		display: flex;
 		justify-content: flex-end;
+		padding: 0 15px 0 75px;
+	}
+	header {
+		margin: 0 20px 0;
+		height: 25px;
+		padding-top: 25px;
+	}
+	header h3 {
+		font-size: 1.6em;
+	}
+	.title {
+		margin-left: 5%;
+		width: 350px;
+		height: 100px;
+		margin-top: 100px;
+	}
+	.title h1 {
+		font-size: 2.6em;
+		line-height: 1.2em;
+	}
+	.item {
+		margin-left: 15%;
+		width: 500px;
+	}
+	li {
+		font-size: 1.2em;
+		padding: 0 10px;
+	}
+	.col-md-6 {
+		width: 50%;
+		float: left;
+	}
+	.col-md-8 {
+		width: 66.666666%;
+		float: left;
+	}
+	.col-md-4 {
+		width: 33.333333%;
+		float: left;
+	}
+	img {
+		width: 100%;
+	}
+	.hidden-md {
+		display: none;
 	}
 }
 @media screen and (min-width: 1024px) {
 	body {
-		background-position: 150px -200px;
+		background-position: 320px -260px;
 		background-size: 1142px 1142px;
 		margin: 0;
 	}
 	header  {
 		align-self: baseline;
-		height: 25px;
 	}
 	.col-lg-6 {
 		width: 50%;
 	}
+	.title {
+		margin-left: 15%;
+		margin-top: 150px;
+		margin-bottom: 25px;
+	}
 	.content {
 		display: flex;
 		align-items: center;
-		margin-top: -35px;
+		margin-top: -55px;
 		height: 100vh;
+	}
+	.item {
+		margin-left: 25%;
+	}
+	.photo {
+		padding: 0;
 	}
 	.photo img {
 		width: 400px;
+		margin-right: 75px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.photo img {
 		margin-right: 150px;
 	}
 }
