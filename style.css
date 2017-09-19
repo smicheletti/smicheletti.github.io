@@ -147,9 +147,6 @@ img {
 .item:last-of-type {
 	padding-bottom: 50px;
 }
-#about .title {
-	margin-top: 50px;
-}
 #about .item {
 	padding-top: 0;
 }
