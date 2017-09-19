@@ -112,12 +112,12 @@ img {
 	display: block;
 	margin-top: 0;
 }
-.past-weeks .title {
+.title {
 	margin-top: 0px;
 	margin-left: 5%;
 }
-.past-weeks .item {
-	width: 100%;
+.item {
+	width: 90%;
 }
 .week h1 {
 	font-size: 2.8em;
@@ -132,12 +132,36 @@ img {
 	width: 100%;
 	content: '';
 }
+.info {
+	width: 90%;
+	margin-left: 5%;
+	display: block;
+	padding-top: 30px;
+}
+.info p {
+	margin: 0;
+}
+.info a {
+	font-weight: 700;
+}
+.item:last-of-type {
+	padding-bottom: 50px;
+}
+#about .title {
+	margin-top: 50px;
+}
+#about .item {
+	padding-top: 0;
+}
 @media screen and (min-width: 500px) {
 	.title {
 		margin-left: 10%;
 	}
-	.item {
+	.item, .info {
 		margin-left: 20%;
+	}
+	.info {
+		width: 400px;
 	}
 }
 @media screen and (min-width: 678px) {
@@ -169,6 +193,7 @@ img {
 		display: flex;
 		justify-content: flex-end;
 		padding: 0 15px 0 75px;
+		margin-top: 120%;
 	}
 	header {
 		margin: 0 20px 0;
@@ -215,15 +240,18 @@ img {
 	.hidden-md {
 		display: none;
 	}
-	.past-weeks .title {
+	.title, #about .title {
 		margin-top: 75px;
+	}
+	#about .item {
+		width: 600px;
 	}
 	.past-weeks img {
 		width: 260px;
 		margin: 40px 25px 0 auto;
 	}
-	.past-weeks .item {
-		padding-top: 15px;
+	.info {
+		width: 600px;
 	}
 }
 @media screen and (min-width: 1024px) {
@@ -246,7 +274,7 @@ img {
 	}
 	.title {
 		margin-left: 15%;
-		margin-top: 150px;
+		margin-top: 175px;
 		margin-bottom: 25px;
 	}
 	.content {
@@ -255,11 +283,13 @@ img {
 		margin-top: -55px;
 		height: 100vh;
 	}
-	.item {
-		margin-left: 25%;
+	#about .item {
+		width: 700px;
+		padding-top: 0;
 	}
 	.photo {
 		padding: 0;
+		margin-top: 0;
 	}
 	.photo img {
 		width: 400px;
@@ -274,12 +304,26 @@ img {
 	.past-weeks img {
 		margin: 40px 100px 0 auto;
 	}
-	.past-weeks .item {
-		margin-left: 15%;
+	.item {
+		margin-left: 25%;
+	}
+	.info {
+		width: 425px;
+		margin-left: 25%;
+		padding-top: 10px;
+	}
+	.info p {
+		margin: 0;
+		font-size: 1.6em;
+		line-height: 1.4em;
 	}
 }
 @media screen and (min-width: 1200px) {
 	.photo img {
-		margin-right: 150px;
+		margin-right: 100px;
+	}
+	.info {
+		width: 475px;
+		padding-top: 15px;
 	}
 }
