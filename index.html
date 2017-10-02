@@ -25,6 +25,20 @@
 		  ga('send', 'pageview');
 
 		</script>
+		<script>
+		/**
+		* Function that tracks a click on an outbound link in Analytics.
+		* This function takes a valid URL string as an argument, and uses that URL string
+		* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+		* using 'navigator.sendBeacon' in browser that support it.
+		*/
+		var trackOutboundLink = function(url) {
+		   ga('send', 'event', 'outbound', 'click', url, {
+		     'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+		   });
+		}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -52,20 +66,20 @@
 				</div>
 				<div class="item">
 					<h3>Baby step:</h3>
-					<a href="https://www.target.com/p/seventh-generation-recycled-bathroom-tissue-24-rolls/-/A-14739024"><h2>Recycled toilet paper 💩</h2></a>
+					<a href="https://www.target.com/p/seventh-generation-recycled-bathroom-tissue-24-rolls/-/A-14739024" onclick="trackOutboundLink('https://www.target.com/p/seventh-generation-recycled-bathroom-tissue-24-rolls/-/A-14739024'); return false;"><h2>Recycled toilet paper 💩</h2></a>
 				</div>
 				<div class="item">
 					<h3>Take it up a notch:</h3>
-					<a href="https://us.whogivesacrap.org/products/100-bamboo-toilet-paper-jumbo-rolls?utm_expid=.QXLwx4ydTMGf_7ZOakUSeg.0&utm_referrer=https%3A%2F%2Fus.whogivesacrap.org%2F"><h2>Bamboo toilet paper 🌱</h2></a>
+					<a href="https://us.whogivesacrap.org/products/100-bamboo-toilet-paper-jumbo-rolls?utm_expid=.QXLwx4ydTMGf_7ZOakUSeg.0&utm_referrer=https%3A%2F%2Fus.whogivesacrap.org%2F" onclick="trackOutboundLink('https://us.whogivesacrap.org/products/100-bamboo-toilet-paper-jumbo-rolls?utm_expid=.QXLwx4ydTMGf_7ZOakUSeg.0&utm_referrer=https%3A%2F%2Fus.whogivesacrap.org%2F'); return false;"><h2>Bamboo toilet paper 🌱</h2></a>
 				</div>
 				<div class="item">
 					<h3>You've got that Whole Foods $$$:</h3>
-					<a href="https://www.tushy.me"><h2>Bidet attachment 💸</h2></a>
+					<a href="https://www.tushy.me" onclick="trackOutboundLink('https://www.tushy.me'); return false;"><h2>Bidet attachment 💸</h2></a>
 				</div>
 			</div>
 			<div class="col-md-6">
 				<div class="photo">
-					<a href="https://us.whogivesacrap.org">
+					<a href="https://us.whogivesacrap.org" onclick="trackOutboundLink('https://us.whogivesacrap.org'); return false;">
 						<img src="toiletpaper.gif" alt="A roll of bamboo toilet paper from the brand Who Gives a Crap"/>
 					</a>
 				</div>
