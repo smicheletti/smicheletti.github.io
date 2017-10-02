@@ -150,6 +150,16 @@ footer p {
 .about .item {
 	padding-top: 0;
 }
+.about .social {
+	float: left;
+	margin-right: 20px;
+}
+.about .item:after {
+	clear: both;
+	content: '';
+	width: 100%;
+	display: block;
+}
 
 /* Past Weeks page styles*/
 .rotate {
@@ -355,6 +365,9 @@ footer p {
 	.about .item {
 		width: 700px;
 		padding-top: 0;
+	}
+	.about .social {
+		font-size: .8em;
 	}
 
 	/* Past Weeks page styles */

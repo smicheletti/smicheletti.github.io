@@ -3,6 +3,13 @@
 	<head>
 		<!-- Global Site Tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106652459-1"></script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KH5ZLPK');</script>
+		<!-- End Google Tag Manager -->
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments)};
@@ -24,6 +31,20 @@
 		  ga('create', 'UA-106652459-1', 'auto');
 		  ga('send', 'pageview');
 
+		</script>
+		<script>
+		/**
+		* Function that tracks a click on an outbound link in Analytics.
+		* This function takes a valid URL string as an argument, and uses that URL string
+		* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+		* using 'navigator.sendBeacon' in browser that support it.
+		*/
+		var trackOutboundLink = function(url) {
+		   ga('send', 'event', 'outbound', 'click', url, {
+		     'transport': 'beacon',
+		     'hitCallback': function(){document.location = url;}
+		   });
+		}
 		</script>
 	</head>
 	<body>
@@ -48,8 +69,12 @@
 					<h1>Sustain Your Sh*t</h1>
 				</div>
 				<div class="item">
-					<p>Sustain Your Shit was born to help you make sustainable changes in your lifestyle. It can be hard to know where to start, and the majority of sustainability resources will probably make you panic that it'll either cost you way to much or be impossible to keep up with long-term. That's where we've got your back. Being sustainable is about being able to literally sustain your choices. Just like a diet, it will be easy to fall back to old habits if you can't maintain your choices. All we ask is that you take as big a step as you can and stick with it.</p>
-					<p>Every week we'll feature a different piece of your life where you can make a difference with a few options. This isn't to say that the options are the only ones possible (far from it), but we know it can be hard to take the first step and find advice on where to start. That's where we come in. Check back every week for something new. ~Updates come every Monday~</p>
+					<p>Sustain Your Shit was born to help you make sustainable changes in your lifestyle. It can be hard to know where to start, and as you start to research, you may panic that it'll either cost you way to much or be impossible to keep up with long-term. That's where we've got your back. Being sustainable is about being able to *literally* sustain your choices. Just like a diet, it will be easy to fall back to old habits if you've set unrealistic expectations. All we ask is that you take as big a step as you can and stick with it.</p>
+					<p>Every week we'll feature a different piece of your life where you can make a difference with a few options. This isn't to say that the options are the only ones possible (far from it), but we know it can be hard to take the first step and find advice on where to start. That's where we come in. Check back every week for something new. ✨ Updates come atcha every Monday ✨</p>
+					<p style="margin-bottom:0">Follow us on:</p>
+					<a href="https://www.instagram.com/sustainyourshit/" onclick="trackOutboundLink('https://www.instagram.com/sustainyourshit/'); return false;" target="_blank" class="social"><h2>Instagram</h2></a>
+					<a href="https://facebook.com/sustainyoursht" onclick="trackOutboundLink('https://facebook.com/sustainyoursht'); return false;" target="_blank" class="social"><h2>Facebook</h2></a>
+					<a href="https://twitter.com/sustainyourshit" onclick="trackOutboundLink('https://twitter.com/sustainyourshit'); return false;" target="_blank" class="social"><h2>Twitter</h2></a>
 					</div>
 				</div>
 			</div>
