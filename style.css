@@ -4,14 +4,16 @@ html {
 body {
 	font-family: 'Lora', serif;
 	font-size: 10px;
-	background-color: #AAC8D3;
-	background-image: url('dots.png');
+	background-color: #9CAA81;
+	background-image: url('grid.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	/*--Yellow background background-position: -30px 20px;
 	background-size: 1034px 1034px;--*/
-	background background-position: -40px 100px;
-	background-size: 834px 734px;
+	/*--Blue background background background-position: -40px 100px;
+	background-size: 834px 734px;--*/
+	background-position: -30px 20px;
+  	background-size: 1034px 1034px;
 	background-attachment: fixed;
 	color: #2C322C;
 	font-weight: 700;
@@ -96,7 +98,7 @@ header h3 {
 
 /* Main content styles */
 .title {
-	background-image: url('block-blue.png');
+	background-image: url('block.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 275px;
@@ -145,8 +147,8 @@ footer p {
 	margin-top: -25px;
 	/*--Yellow color: #d2b254;--*/
 	/*--Yellow color: color: #F5E4B2;--*/
-	/*--Green color: #526729;--*/
-	color: #5791a5;
+	color: #526729;
+	/*--Blue color: #5791a5;--*/
 	font-weight: 700;
 	clear: both;
 }
