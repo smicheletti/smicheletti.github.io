@@ -4,16 +4,16 @@ html {
 body {
 	font-family: 'Lora', serif;
 	font-size: 10px;
-	background-color: #E3A089;
-	background-image: url('squiggles.png');
+	background-color: #AAC8D3;
+	background-image: url('dots.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	/*--Yellow background background-position: -30px 20px;
 	background-size: 1034px 1034px;--*/
-	/*--Blue background background background-position: -40px 100px;
-	background-size: 834px 734px;--*/
-	background-position: -30px 20px;
-  	background-size: 1034px 1034px;
+	background background-position: -40px 100px;
+	background-size: 834px 734px;
+	/*--Pink background-position: -30px 20px;
+  	background-size: 1034px 1034px;--*/
 	background-attachment: fixed;
 	color: #2C322C;
 	font-weight: 700;
@@ -98,7 +98,7 @@ header h3 {
 
 /* Main content styles */
 .title {
-	background-image: url('block-pink.png');
+	background-image: url('block-blue.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 275px;
@@ -147,9 +147,9 @@ footer p {
 	margin-top: -25px;
 	/*--Yellow color: #d2b254;--*/
 	/*--Yellow color: color: #F5E4B2;--*/
-	color: #bb6649;
+	/*--Pink color: #bb6649;--*/
 	/*--Green color: #526729;--*/
-	/*--Blue color: #5791a5;--*/
+	color: #5791a5;
 	font-weight: 700;
 	clear: both;
 }
