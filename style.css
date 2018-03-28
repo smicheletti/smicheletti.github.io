@@ -349,11 +349,14 @@ footer p {
 
 }
 @media screen and (min-width: 1024px) {
-	body {
-		/*-- Green background background-position: 320px -260px;
-		background-size: 1142px 1142px; --*/
+	.pink, .blue, .yellow {
 		background-position: 470px -50px;
 		background-size: 1052px 882px;
+		margin: 0;
+	}
+	.green {
+		background-position: 320px -260px;
+		background-size: 1142px 1142px;
 		margin: 0;
 	}
 	header  {
